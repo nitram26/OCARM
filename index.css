@@ -454,3 +454,18 @@ footer .container{
     padding-left: 2em;
     color: rgb(160, 11, 11);
 }
+
+.doc{
+    color: aliceblue;
+    font-size: 1em;
+    text-align: left;
+}
+
+.carta{
+    text-align: left;
+    
+}
+
+.carta ol li{
+    padding: 0.5em;
+}
