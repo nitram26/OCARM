@@ -440,6 +440,11 @@ footer .container{
     width: 70em;
     border: 5px double brown;
 }
+.img1{
+    width: 2.5em;
+    border: 2px solid brown;
+    margin-left: 0.3em;
+}
 
 .container nav a{
     color: azure;
@@ -449,6 +454,8 @@ footer .container{
     color: yellow;
     font-size: 1.1em;
 }
+
+
 
 .sem{
     padding-left: 2em;
@@ -472,7 +479,7 @@ footer .container{
 
 .contact{
 font-size: 2em;
-color: brown;
+color: rgb(0, 255, 213);
 font-style: italic;
 
 }
