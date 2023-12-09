@@ -11,10 +11,11 @@ body{
     background-color: antiquewhite;
 }
 
-h1{ font-size: 2.8em;}
-h2{ font-size: 2.7em;}
-h3{ font-size: 2em;}
+h1{ font-size: 2.8em; margin: 1em;}
+h2{ font-size: 2.7em; margin: 1em;}
+h3{ font-size: 2em; margin: 1em;}
 p{ font-size: 1.25em;}
+p{margin-left: 1em;}
 ul{ list-style: none;}
 li{ font-size: 1.25em;}
 
@@ -443,6 +444,16 @@ footer .container{
 .img1{
     width: 2.5em;
     border: 2px solid brown;
+    margin-left: 0.3em;
+}
+.img2{
+    width: 1em;
+    border: 2px solid brown;
+    margin-left: 0.3em;
+}
+.img3{
+    width: 30em;
+    border: 7px double brown;
     margin-left: 0.3em;
 }
 
