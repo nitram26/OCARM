@@ -489,9 +489,19 @@ footer .container{
 }
 
 .contact{
-font-size: 2em;
-color: rgb(0, 255, 213);
+font-size: 1em;
+color: brown;
 font-style: italic;
-
 }
 
+.footer{
+  border: green double 4px;
+  background-color: antiquewhite;
+  border-radius: 1em;
+}
+
+.content{
+  color: white;
+  text-align: left;
+  display: flex;
+}
