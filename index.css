@@ -507,3 +507,8 @@ font-style: italic;
   text-align: left;
   display: flex;
 }
+
+.dos>a{
+  color: white;
+ text-decoration: none;
+}
