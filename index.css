@@ -45,9 +45,6 @@ button:hover{
 
 header{
     background-color: rgb(95, 8, 8);
-   
-    
-    
 }
 
 header .logo{
@@ -511,4 +508,9 @@ font-style: italic;
 .dos>a{
   color: white;
  text-decoration: none;
+}
+
+.titulo{
+  color:brown ;
+  
 }
