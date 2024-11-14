@@ -11,13 +11,13 @@ body{
     background-color: antiquewhite;
 }
 
-h1{ font-size: 2.8em; margin: 1em;}
+/* h1{ font-size: 2.8em; margin: 1em;}
 h2{ font-size: 2.7em; margin: 1em;}
 h3{ font-size: 2em; margin: 1em;}
 p{ font-size: 1.25em;}
 p{margin-left: 1em;}
 ul{ list-style: none;}
-li{ font-size: 1.25em;}
+li{ font-size: 1.25em;} */
 
 button{
     font-size: 1.25em;
@@ -36,9 +36,19 @@ button:hover{
 }
 
 .container{
-    max-width: 1400px;
-     margin: auto; 
-    
+  display: flex;
+  position: fixed;
+  border: 5px double rgb(247, 241, 241);
+  background-color: rgb(91, 9, 9);
+  width: 95%;
+  border-radius: 15px;
+  color: white;
+  font-size: 1.5em;
+
+  /* flex-direction: column;  
+  justify-content: left; 
+  flex-direction: row;
+  */
 }
 
 .color-acento{ color: rgb(96, 7, 7); }
@@ -48,21 +58,20 @@ header{
 }
 
 header .logo{
-    margin: 0;
     font-weight: bold;
     color: white;
-    font-size: 1.7em;
     font-style: italic;
+    margin-left: 1em;
 }
 
 header .container{
     display: flex;
-     flex-direction: column;  
+    
     /* align-items: center; */
     position: fixed;
     border: 5px double rgb(247, 241, 241);
     background-color: rgb(91, 9, 9);
-    width: 100%;
+  
     border-radius: 15px;
 }
 
@@ -361,8 +370,9 @@ footer .container{
 /* /////////////////////////////////////////////////////////////////// */
 
 .logoC{
-    width: 50px;
+    width: 45px;
     border-radius: 20px;
+    margin-top: 0.2em;
 }
 
 .logo>a{
@@ -510,7 +520,64 @@ font-style: italic;
  text-decoration: none;
 }
 
-.titulo{
-  color:brown ;
-  
+section{
+  padding: 5%;
+  margin-left: -4em;
 }
+.titulo{
+  color: red;
+  font-size: 1.5em;
+}
+
+.cita{
+  color: brown;
+  font-style: italic;
+  font-size: 1.5em;
+}
+.subtitulo{
+  color: darkred;
+  margin-left: 1em;
+}
+.lema{
+  color: blue;
+  font-size: 1.2em;
+}
+.init{
+  margin-top: 2.5em;
+  border: 4px double brown;
+  width: 10em;
+  text-align: center;
+
+}
+.select{
+  border: brown 1px solid;
+  font-size: 1.2em;
+  width: 90%;
+  margin: 0.4em;
+  padding: 0.3em;
+}
+
+.nombre{
+  color: white;
+  font-size: 0.9em;
+  margin-top: 2%;
+}
+
+.nombre:hover{
+  color: yellow;
+}
+
+
+.li{
+  border: 1px solid brown;
+  width: 25em;
+  margin: 0.4em;
+  font-size: 1.5em;
+  padding-left: 0.5em;
+ }
+ summary{
+  color: brown;
+  font-style: italic;
+  font-weight: bold;
+}
+
