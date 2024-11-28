@@ -11,13 +11,6 @@ body{
     background-color: antiquewhite;
 }
 
-/* h1{ font-size: 2.8em; margin: 1em;}
-h2{ font-size: 2.7em; margin: 1em;}
-h3{ font-size: 2em; margin: 1em;}
-p{ font-size: 1.25em;}
-p{margin-left: 1em;}
-ul{ list-style: none;}
-li{ font-size: 1.25em;} */
 
 button{
     font-size: 1.25em;
@@ -40,58 +33,23 @@ button:hover{
   position: fixed;
   border: 5px double rgb(247, 241, 241);
   background-color: rgb(91, 9, 9);
-  width: 95%;
-  border-radius: 15px;
+  width: 98%;
+  border-radius: 1em;
+  margin-left: 1%;
   color: white;
   font-size: 1.5em;
+  padding-left: 1em;
 
   /* flex-direction: column;  
   justify-content: left; 
   flex-direction: row;
   */
 }
+.contenedor{
+  margin-left: 5%;
+}
 
 .color-acento{ color: rgb(96, 7, 7); }
-
-header{
-    background-color: rgb(95, 8, 8);
-}
-
-header .logo{
-    font-weight: bold;
-    color: white;
-    font-style: italic;
-    margin-left: 1em;
-}
-
-header .container{
-    display: flex;
-    
-    /* align-items: center; */
-    position: fixed;
-    border: 5px double rgb(247, 241, 241);
-    background-color: rgb(91, 9, 9);
-  
-    border-radius: 15px;
-}
-
-header nav{
-    display: flex;
-    /* flex-direction: column;  */
-    /* text-align: center;  */
-    padding-bottom: 15px;
-}
-
-header a{
-    padding: 5px 12px;
-    text-decoration: none;
-    font-weight: bold;
-    
-}
-
-header a:hover{
-    color: rgb(219, 212, 224);
-}
 
 #hero{
     display: flex;
@@ -109,10 +67,6 @@ header a:hover{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-}
-
-#hero h1{
-    color: white;
 }
 
 #hero button{
@@ -185,10 +139,10 @@ header a:hover{
     padding:12px;
 }
 
-#caracteristicas li{
+/* #caracteristicas li{
     margin: 16px 0px;
     font-weight: bold;
-}
+} */
 
 #final{
     display: flex;
@@ -209,26 +163,7 @@ header a:hover{
     font-size: 5vw;
 }
 
-footer{
-    background-color: rgb(230,230,230);
-    height: 5em;
-}
-
-footer p{
- 
-    padding: 12px;
-    color: rgb(100,100,100);
-    text-align: center;
-}
-
-footer .container{
-    height: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-}
-
-@media (min-width: 850px){
+@media (min-width: 20%){
     header{
         position: fixed;
         width: 100%;
@@ -356,9 +291,6 @@ footer .container{
         font-size: 2em;
     }
 
-    footer .container{
-        justify-content: flex-end;
-    }
 }
 
 @media (min-width: 1200px) {
@@ -368,18 +300,22 @@ footer .container{
 }
 
 /* /////////////////////////////////////////////////////////////////// */
+.logo{
+  font-style:italic ;  
+  padding-right: 1em;   
+}
 
 .logoC{
-    width: 45px;
+    width: 2em;
     border-radius: 20px;
     margin-top: 0.2em;
 }
 
-.logo>a{
+/* .logo>a{
     color: white;
-    font-size: 1em;       
- 
-}
+    font-size: 1em;  
+
+} */
 
 .button{
     font-size: 1.25em;
@@ -397,14 +333,14 @@ footer .container{
     margin-top: 3em;
 }
 
-.ol>li{
+/* .ol>li{
     border: 5px double rgb(165, 48, 48);
     padding-top: 10px; 
     padding-bottom: 10px;
     margin: 0.3em;
     
    
-  }
+  } */
 
   .inicio{
     width: 100%;
@@ -493,9 +429,9 @@ footer .container{
     
 }
 
-.carta ol li{
+/* .carta ol li{
     padding: 0.5em;
-}
+} */
 
 .contact{
 font-size: 1em;
@@ -507,6 +443,7 @@ font-style: italic;
   border: green double 4px;
   background-color: antiquewhite;
   border-radius: 1em;
+  text-align: center;
 }
 
 .content{
@@ -561,6 +498,8 @@ section{
   color: white;
   font-size: 0.9em;
   margin-top: 2%;
+  padding-left: 1em;
+  text-decoration: none;
 }
 
 .nombre:hover{
@@ -570,7 +509,7 @@ section{
 
 .li{
   border: 1px solid brown;
-  width: 25em;
+  width: 90%;
   margin: 0.4em;
   font-size: 1.5em;
   padding-left: 0.5em;
