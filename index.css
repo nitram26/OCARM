@@ -511,7 +511,12 @@ section{
   width: 90%;
   margin: 0.4em;
   font-size: 1.5em;
-  padding-left: 0.5em;
+  padding: 0.3em;
+  color: blue;
+}
+.li>a{
+ text-decoration: none;
+ color: blue;
  }
  summary{
   color: brown;
@@ -521,4 +526,10 @@ section{
 
 .links{
  margin-left: 10px;
+}
+
+.studio{
+  color: brown;
+  font-style: italic;
+  font-size: 0.8em;
 }
