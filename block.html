@@ -1,24 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./index.css">
-  <title>Block- OCARM</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números Desordenados</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .number {
+            display: inline-block;
+            margin: 0 10px;
+            font-size: 1.5rem;
+        }
+    </style>
 </head>
 <body>
-  <button><a href="./index.html">INDEX</a></button>
-  <ol>  <li><a href="https://www.youtube.com/watch?v=GjIBgifuzis&t=115s">Curso de Apologética</a> </li>
-  
-  <li><a href="https://www.youtube.com/watch?v=ATZdmKplMJU">Apóstoles de la palabra</a></li>
-  <li><a href="https://www.youtube.com/watch?v=ehpol4z9X9Q">Hermenéutica P Nelson</a></li>
-  <li><a href="https://www.youtube.com/watch?v=NtM198USgzw">Hermenéutica Centro Bíblico Paulinas</a></li>
-  <li><a href="https://www.youtube.com/watch?v=51ftYIUl-qY">Interpretación de la biblia</a></li>
-<li><a href="https://www.youtube.com/watch?v=Kw2Ol5dOts4">Charla U de Comillas</a></li>
-  <li><a href="https://www.youtube.com/watch?v=Is-MpUhnpfM"ISCREB></a></li>
-</ol>
+    <h1>Números Desordenados</h1>
+    <div id="numberContainer"></div>
+    <p>Selecciona un número para sumarlo:</p>
+    <select id="selectSum" onchange="updateNumbers()">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+    </select>
 
-<H2>INTERPRETACIÓN BÍBLICA EN LA IGLESIA <br> documento de la iglesia buscar</H2>
+    <script>
+        // Generar y desordenar el array
+        let numbers = [1, 2, 3, 4, 5, 6, 7].sort(() => Math.random() - 0.5);
 
+        // Mostrar los números en la página
+        const numberContainer = document.getElementById('numberContainer');
+        function renderNumbers() {
+            numberContainer.innerHTML = '';
+            numbers.forEach(num => {
+                const span = document.createElement('span');
+                span.className = 'number';
+                span.textContent = num;
+                numberContainer.appendChild(span);
+            });
+        }
+        renderNumbers();
+
+        // Actualizar los números al cambiar el valor del select
+        function updateNumbers() {
+            const sumValue = parseInt(document.getElementById('selectSum').value);
+
+            numbers = numbers.map(num => {
+                if (num === 7) {
+                    return 1; // Si es 7, se convierte en 1
+                } else if (num === 6) {
+                    return 1; // Si es 6, también se convierte en 1
+                } else {
+                    return num + sumValue; // Aumenta el número normal
+                }
+            });
+
+            renderNumbers(); // Vuelve a renderizar los números
+        }
+    </script>
 </body>
 </html>

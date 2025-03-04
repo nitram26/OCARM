@@ -533,3 +533,11 @@ section{
   font-style: italic;
   font-size: 0.8em;
 }
+
+.acorde{
+  white-space: pre;
+  margin-top: 1em;
+  display: block;
+font-weight: bold;
+color: brown;
+}
