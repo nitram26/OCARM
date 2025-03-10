@@ -1,65 +1,101 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Números Desordenados</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-        }
-        .number {
-            display: inline-block;
-            margin: 0 10px;
-            font-size: 1.5rem;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selección de Tonos</title>
+  <style>
+    .pre {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f9f9f9;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      white-space: pre-wrap;
+      font-size: 2em;
+    }
+
+    /* 🎶 Estilo para los acordes */
+    .acorde {
+      font-weight: bold; /* Negrita */
+      color: red; /* Color rojo */
+    }
+  </style>
 </head>
 <body>
-    <h1>Números Desordenados</h1>
-    <div id="numberContainer"></div>
-    <p>Selecciona un número para sumarlo:</p>
-    <select id="selectSum" onchange="updateNumbers()">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-    </select>
+  <h1>Vienen con Alegría</h1>
+  
+  <!-- Menú desplegable -->
+  <label for="tono">Selecciona un tono:</label>
+  <select id="tono">
+    <option value="D">D (Re)</option>
+    <option value="C">C (Do)</option>
+    <option value="E">E (Mi)</option>
+    <option value="F">F (Fa)</option>
+    <option value="G">G (Sol)</option>
+    <option value="A">A (La)</option>
+  </select>
 
-    <script>
-        // Generar y desordenar el array
-        let numbers = [1, 2, 3, 4, 5, 6, 7].sort(() => Math.random() - 0.5);
+  <div id="cancion">
+    <pre id="letra"></pre>
+  </div>
 
-        // Mostrar los números en la página
-        const numberContainer = document.getElementById('numberContainer');
-        function renderNumbers() {
-            numberContainer.innerHTML = '';
-            numbers.forEach(num => {
-                const span = document.createElement('span');
-                span.className = 'number';
-                span.textContent = num;
-                numberContainer.appendChild(span);
-            });
-        }
-        renderNumbers();
+  <script>
+    // 🎵 Tonalidades transpuestas
+    const tonos = {
+      "D": `
+D
+Vienen con alegría Señor,
+                   D7
+CANTANDO Vienen con alegría Señor,
+G         A            F#m     Bm
+LOS QUE CAMINAN POR LA VIDA, SEÑOR, 
+     G        A      D
+SEMBRANDO TU PAZ Y AMOR.
 
-        // Actualizar los números al cambiar el valor del select
-        function updateNumbers() {
-            const sumValue = parseInt(document.getElementById('selectSum').value);
+D                       A
+Vienen trayendo la esperanza
+                      D
+a un mundo cargado de ansiedad,
+                         A
+un mundo que busca y que no alcanza
+                    D      
+caminos de amor y de amistad.
+      `,
+      "C": `
+C
+Vienen con alegría Señor,
+                   C7
+cantando vienen con alegría, Señor,
+F         G            Em     Am
+los que caminan por la vida, Señor
+     F        G      C
+sembrando tu paz y amor
 
-            numbers = numbers.map(num => {
-                if (num === 7) {
-                    return 1; // Si es 7, se convierte en 1
-                } else if (num === 6) {
-                    return 1; // Si es 6, también se convierte en 1
-                } else {
-                    return num + sumValue; // Aumenta el número normal
-                }
-            });
+C                       G
+Vienen trayendo la esperanza
+                      C
+a un mundo cargado de ansiedad,
+                         G
+un mundo que busca y que no alcanza
+                    C      
+caminos de amor y de amistad.
+      `
+    };
 
-            renderNumbers(); // Vuelve a renderizar los números
-        }
-    </script>
+    // Función para estilizar los acordes
+    function estilizarAcordes(texto) {
+      return texto.replace(/([A-G][#b]?m?7?\+?°?)/g, '<span class="acorde">$1</span>');
+    }
+
+    // Mostrar la letra en el tono inicial
+    document.getElementById('letra').innerHTML = estilizarAcordes(tonos["D"]);
+
+    // Cambia la letra de la canción según el tono seleccionado
+    document.getElementById('tono').addEventListener('change', function() {
+      const tonoSeleccionado = this.value;
+      document.getElementById('letra').innerHTML = estilizarAcordes(tonos[tonoSeleccionado]);
+    });
+  </script>
 </body>
 </html>

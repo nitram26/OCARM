@@ -537,7 +537,27 @@ section{
 .acorde{
   white-space: pre;
   margin-top: 1em;
-  display: block;
+
 font-weight: bold;
 color: brown;
+}
+
+.pre {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  white-space: pre-wrap;
+  font-size: 1.5em;
+}
+
+.select{
+  width: 12em;
+}
+.select1{
+  width: 14em;
+  height: 2em;
+  background-color: brown;
+  color: white;
+  margin-left: 1em;
 }
