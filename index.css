@@ -561,3 +561,7 @@ color: brown;
   color: white;
   margin-left: 1em;
 }
+
+a>h1{
+  color: blue;
+}
