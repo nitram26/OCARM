@@ -461,6 +461,10 @@ section{
   padding: 5%;
   margin-left: -4em;
 }
+.section{
+  padding: 1em;
+  margin-left: 2em;
+}
 
 .cita{
   color: brown;
@@ -524,6 +528,10 @@ section{
   font-weight: bold;
 }
 
+summary>a{
+  color: blue;
+}
+
 .links{
  margin-left: 10px;
 }
@@ -552,7 +560,7 @@ color: brown;
 }
 
 .select{
-  width: 12em;
+  width: 50em;
 }
 .select1{
   width: 14em;
@@ -564,4 +572,16 @@ color: brown;
 
 a>h1{
   color: blue;
+}
+
+.boton{
+  background-color: brown;
+  color: white;
+  margin-left: 40%;
+  width: 17em;
+  height: 3.5em;
+  border-radius: 1em;
+  margin-top: 0.2em;
+  font-size: 0.6em;
+margin-top: 1em;
 }
