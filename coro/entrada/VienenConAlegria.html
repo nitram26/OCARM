@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../indexCoro.css" />
+    <title>CORO</title>
+  </head>
+  <body>
+    <p class="pCoro" id="alInicio" class="principio"></p>
+    <header>
+      <div class="container">
+        <p class="logo">CRISTO SALVADOR</p>
+        <!-- ****************************************************** -->
+        <a href="#alInicio"
+          ><img src="../../media/ESCUDOCARM.png" alt="" class="img"
+        /></a>
+        <a href="../index.html" class="nombre">INICIO </a>
+      </div>
+    </header>
+    <br /><br />
+    <!-- ********************************************* -->
+    <h1 class="init">VIENEN CON ALEGRÍA</h1>
+    <h3 class="cita">"Estén siempre alegres en el Señor". <br />Fil 4,4</h3>
+
+    <!-- ********************************************* -->
+    
+        <details class="details">
+          <summary>Orden Seglar Carmelita</summary>
+        <ol>
+          <li>CHORDA: D</li>
+          <li>SONUS: 008 </li>
+          <li>ACTIO: 4T 101-11</li>
+          <li>C. Garabain</li>
+        </ol>
+        </details>
+   
+      <!-- ****************************** -->
+    </ol>
+    <span for="transposicion" class="cita">Elegir Acordes</span>
+    <select id="transposicion" class="select">
+      <!-- Opciones del 0 al 11 semitonos -->
+      <option value="">SELECCIONAR</option>
+      <option value="0">C</option>
+      <!-- <option  value="1">+1</option> -->
+      <option value="2">D</option>
+      <!-- <option  value="3">+3</option> -->
+      <option value="4">E</option>
+      <option value="5">F</option>
+      <!-- <option  value="6">+6</option> -->
+      <option value="7">G</option>
+      <!-- <option  value="8">+8</option> -->
+      <option value="9">A</option>
+      <!-- <option  value="10">+10</option> -->
+      <option value="11">B</option>
+    </select>
+
+    <div class="cancion">
+      <pre class="preCoro" id="L01"></pre>
+      <p class="pCoro">Vienen con alegría, Señor,</p>
+
+      <pre class="preCoro" id="L02"></pre>
+      <p class="pCoro">cantando vienen con alegría, Señor,</p>
+
+      <pre class="preCoro" id="L03"></pre>
+      <p class="pCoro">los que caminan por la vida, Señor,</p>
+
+      <pre class="preCoro" id="L04"></pre>
+      <p class="pCoro">sembrando tu paz y amor.</p>
+      <hr />
+
+      <pre class="preCoro" id="L05"></pre>
+      <p class="pCoro">Vienen trayendo la esperanza</p>
+
+      <pre class="preCoro" id="L06"></pre>
+      <p class="pCoro">a un mundo cargado de ansiedad,</p>
+
+      <pre class="preCoro" id="L07"></pre>
+      <p class="pCoro">un mundo que busca y que no alcanza</p>
+
+      <pre class="preCoro" id="L08"></pre>
+      <p class="pCoro">caminos de amor y de amistad.</p>
+    </div>
+
+    <script>
+      const nota = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+      const letras = [
+        "C",
+        "C#",
+        "D",
+        "D#",
+        "E",
+        "F",
+        "F#",
+        "G",
+        "G#",
+        "A",
+        "A#",
+        "B",
+      ];
+      const esp = (n) => " ".repeat(n); // Espacios visuales
+
+      // Esta función actualiza los acordes mostrados según la transposición `n`
+      function actualizarAcordes(n) {
+        const transpuestas = nota.map(
+          (x) => ((((x + n - 1) % 12) + 12) % 12) + 1
+        );
+        const lin = transpuestas.map((x) => letras[x - 1]);
+
+        const acordes = {
+          L01: [lin[0]],
+          L02: [lin[0]],
+          L03: [lin[5], esp(15), lin[0]],
+          L04: [lin[7], esp(12), lin[0]],
+          L05: [lin[0], esp(10), lin[7]],
+          L06: [esp(8), lin[0]],
+          L07: [esp(12), lin[7]],
+          L08: [esp(6), lin[0]],
+        };
+
+        for (const id in acordes) {
+          document.getElementById(id).innerText = acordes[id].join(" ");
+        }
+      }
+
+      // Actualizar al cargar
+      //actualizarAcordes(2); // Valor por defecto: +2
+
+      // Evento de cambio en el select
+      document
+        .getElementById("transposicion")
+        .addEventListener("change", (e) => {
+          const valor = parseInt(e.target.value);
+          actualizarAcordes(valor);
+        });
+    </script>
+  </body>
+</html>

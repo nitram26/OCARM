@@ -1,321 +1,4 @@
-*{
-    box-sizing: border-box;
-}
 
-html{
-    scroll-behavior: smooth;
-}
-
-body{
-    margin: 0;
-    background-color: antiquewhite;
-}
-
-
-button{
-    font-size: 1.25em;
-    font-weight: bold;
-    padding: 10px 30px;
-    border-radius: 5px;
-    border: 2px solid rgba(0,0,0,0.3);
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
-    color: white;
-    background-color: rgb(39, 121, 124);
-   
-}
-
-button:hover{
-    background-color: rgb(101, 33, 165);
-}
-
-.container{
-  display: flex;
-  position: fixed;
-  border: 5px double rgb(247, 241, 241);
-  background-color: rgb(91, 9, 9);
-  width: 98%;
-  border-radius: 1em;
-  margin-left: 1%;
-  color: white;
-  font-size: 1.5em;
-  padding-left: 1em;
-
-  /* flex-direction: column;  
-  justify-content: left; 
-  flex-direction: row;
-  */
-}
-.contenedor{
-  margin-left: 5%;
-}
-
-.color-acento{ color: rgb(96, 7, 7); }
-
-#hero{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    flex-direction: column;
-    height: 90vh;
-    background-image: linear-gradient(
-        0deg,
-        rgba(0,0,0,0.5),
-        rgba(0,0,0,0.5)
-    )
-    ,url("media/PORTADA.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-}
-
-#hero button{
-    font-size: 1.75em;
-}
-
-#somos-proya .container{
-    text-align: center;
-    padding:12px;
-}
-
-#nuestros-programas{
-    background-color: rgb(30,30,30);
-    color: white;
-    text-align: center;
-}
-
-#nuestros-programas .container{
-    padding: 150px 12px;
-}
-
-#nuestros-programas h2{
-    margin-top: 0;
-    font-size: 3.2em;
-}
-
-#nuestros-programas p{
-    display: none;
-}
-
-#nuestros-programas .carta{
-    background-position: center center;
-    background-size: cover;
-    padding: 50px 0px;
-    margin: 30px;
-    border-radius: 15px;
-}
-
-.carta:first-child{
-    background-image: linear-gradient(
-        0deg,
-        rgba(0,0,0,0.5),
-        rgba(0,0,0,0.5)
-    )
-    ,url("media/front-end.jpg");
-
-}
-
-.carta:nth-child(2){
-    background-image: linear-gradient(
-        0deg,
-        rgba(0,0,0,0.5),
-        rgba(0,0,0,0.5)
-    )
-    ,url("media/full-stack.jpg");
-}
-
-.carta:nth-child(3){
-    background-image: linear-gradient(
-        0deg,
-        rgba(0,0,0,0.5),
-        rgba(0,0,0,0.5)
-    )
-    ,url("media/python.jpg");
-
-}
-
-#caracteristicas .container{
-    text-align: center;
-    padding:12px;
-}
-
-/* #caracteristicas li{
-    margin: 16px 0px;
-    font-weight: bold;
-} */
-
-#final{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-color: rgb(112, 6, 6);
-    color: white;
-    padding-bottom: 4em;
-}
-
-#final h2{
-    font-size: 9vw;
-}
-
-#final button{
-    font-size: 5vw;
-}
-
-@media (min-width: 20%){
-    header{
-        position: fixed;
-        width: 100%;
-    }
-
-    header .container{
-        flex-direction: row;
-        justify-content: left; 
-       
-    }
-
-    header nav{
-        flex-direction: row;
-        padding-bottom: 0;
-        /* padding-right: 20px; */
-    }
-
-    #hero h1{
-        font-size: 5em;
-    }
-
-    #somos-proya .container{
-        display: flex;
-        justify-content: space-evenly;
-    }
-
-    #somos-proya .texto{
-        width: 50%;
-        max-width: 600px;
-        text-align: initial;
-        padding-left: 30px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    #somos-proya h2{
-        margin-top: 0px;
-    }
-
-    #somos-proya .img-container{
-        background-image: url("media/JUNTOS.jpg");
-        background-size: cover;
-        background-position: center center;
-        height: 500px;
-        width: 400px; 
-    }
-
-    #nuestros-programas .programas{
-        display: flex;
-        justify-content: center;
-    }
-
-    #nuestros-programas p{
-        display: block;
-        margin-bottom: 30px;
-    }
-
-    #nuestros-programas h2{
-        font-size: 4em;
-    }
-
-    #nuestros-programas h3{
-        margin-top: 0;
-    }
-
-    #nuestros-programas .carta{
-        padding: 50px;
-        background-size: 100% 150px;
-        background-repeat: no-repeat;
-        background-position-y: 0;
-        background-color: rgba(50, 50, 50, 1);
-        box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
-    }
-
-    .carta:first-child{
-        background-image: linear-gradient(
-            0deg,
-            rgba(0,0,0,0.5),
-            rgba(0,0,0,0.5)
-        )
-        ,url("media/PARTITURAS.PNG");
-
-    }
-
-    .carta:nth-child(2){
-        background-image: linear-gradient(
-            0deg,
-            rgba(0,0,0,0.5),
-            rgba(0,0,0,0.5)
-        )
-        ,url("media/AUDIOS.PNG");
-    }
-
-    .carta:nth-child(3){
-        background-image: linear-gradient(
-            0deg,
-            rgba(0,0,0,0.5),
-            rgba(0,0,0,0.5)
-        )
-        ,url("media/DOCUMENTOS.png");
-
-    }
-
-    #caracteristicas{
-        background-image: url("media/ESTUDIOS.jpg");
-        background-repeat: no-repeat;
-        background-size: 500px 400px;
-        background-position: calc(100vw - 500px) 50px;
-    }
-
-    #caracteristicas .container{
-        text-align: initial;
-    }
-
-    #caracteristicas ul{
-        margin-left: 100px;
-    }
-
-    #final h2{
-        font-size: 5em;
-    }
-
-    #final button{
-        font-size: 2em;
-    }
-
-}
-
-@media (min-width: 1200px) {
-    #caracteristicas{
-        background-position-x: calc(100vw - 800px);
-    }
-}
-
-/* /////////////////////////////////////////////////////////////////// */
-.logo{
-  font-style:italic ;  
-  padding-right: 1em;   
-}
-
-.logoC{
-    width: 2em;
-    border-radius: 20px;
-    margin-top: 0.2em;
-}
-
-/* .logo>a{
-    color: white;
-    font-size: 1em;  
-
-} */
 
 .button{
     font-size: 1.25em;
@@ -333,14 +16,6 @@ button:hover{
     margin-top: 3em;
 }
 
-/* .ol>li{
-    border: 5px double rgb(165, 48, 48);
-    padding-top: 10px; 
-    padding-bottom: 10px;
-    margin: 0.3em;
-    
-   
-  } */
 
   .inicio{
     width: 100%;
@@ -481,14 +156,16 @@ section{
 }
 .init{
   margin-top: 2.5em;
+  margin-left: 1.5em;
   border: 4px double brown;
-  width: 10em;
+  width: 20em;
   text-align: center;
   color: brown;
   font-style: italic;
   padding: 0.2em;
 
 }
+
 .select{
   border: brown 1px solid;
   font-size: 1.2em;
@@ -510,18 +187,7 @@ section{
 }
 
 
-.li{
-  border: 1px solid brown;
-  width: 90%;
-  margin: 0.4em;
-  font-size: 1.5em;
-  padding: 0.3em;
-  color: blue;
-}
-.li>a{
- text-decoration: none;
- color: blue;
- }
+
  summary{
   color: brown;
   font-style: italic;
@@ -562,7 +228,7 @@ color: brown;
 .select{
   width: 50em;
 }
-.select1{
+.logoC{
   width: 14em;
   height: 2em;
   background-color: brown;
@@ -574,14 +240,4 @@ a>h1{
   color: blue;
 }
 
-.boton{
-  background-color: brown;
-  color: white;
-  margin-left: 40%;
-  width: 17em;
-  height: 3.5em;
-  border-radius: 1em;
-  margin-top: 0.2em;
-  font-size: 0.6em;
-margin-top: 1em;
-}
+

@@ -1,43 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./index.css">
-  <title>CARMELITAS</title>
-</head>
-<body>
-  <p id="alInicio" class="principio"></p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./indexCoro.css" />
+    <title>CARMELITAS</title>
+  </head>
+  <body>
+    <p id="alInicio" class="principio"></p>
     <header>
       <div class="container">
-        <p class="logo"> CRISTO SALVADOR</p>
+        <p class="logo">CRISTO SALVADOR</p>
         <!-- ****************************************************** -->
-        <a href="#alInicio"><img src="./media/ESCUDOCARM.png" alt="" class="logoC"></a>
-        <a href="./entrada/index.html" class="nombre">CORO </a>
-        <a href="./index/index.html" class="nombre">FORMACIÓN </a>
-      
+        <div class="img">
+          <img src="./media/ESCUDOCARM.png" alt="" class="img" />
+        </div>
+
+        <p>
+          <a href="./coro/entrada/index.html" class="nombre">CORO </a>
+          <a href="./index/index.html" class="nombre">FORMACIÓN </a>
+        </p>
       </div>
-    </header> <br><br>
-  
-<!-- *************************************************************************** -->
-    <section id="hero">
-<!-- imagen de portada ver css -->
+    </header>
+    <section class="">
+      <div class="portada">
+        <img src="./media/PORTADA2023.jpeg" alt="" class="" />
+        <div class="imageSub">2022</div>
+      </div>
+      <div class="portada">
+        <img src="./media/JUNTOS.jpg" alt="" class="" />
+        <div class="imageSub">2019</div>
+      </div>
+      <div class="portada">
+        <img src="./media/PORTADA.jpg" alt="" class="" />
+        <div class="imageSub">2016</div>
+      </div>
     </section>
     <!--*****************************************************************************  -->
-    <section >
-         <footer class="footer">
-     
-        
-            <h3>&copy;  ORDEN CARMELITA SEGLAR-PUCUSANA 2016-<span id="year"></span> <br>Diseñado por:  <span class="studio">StudioXperto </span></h3>
-            <h5><div id="semana-info"></div>  </h5>
-            <button id="info-button" class="boton">SEMANA-DIA</button>
+    <section>
+      <footer class="footer">
+        <h3>
+          &copy; ORDEN CARMELITA SEGLAR-PUCUSANA <br />
+          2016-<span id="year"></span> <br />Diseñado por:
+          <span class="studio">StudioXperto </span>
+        </h3>
+        <h5><div id="semana-info"></div></h5>
+        <button id="info-button" class="boton">SEMANA-DIA</button>
         <script>
-            document.getElementById("year").textContent = new Date().getFullYear();
+          document.getElementById("year").textContent =
+            new Date().getFullYear();
         </script>
-        
-        </footer>
-      </section>
-      <!-- ////////////////////////////////////////// -->
-       <script src="./JS/numeroDeSemana.js"></script>
-</body>
+      </footer>
+    </section>
+    <!-- ////////////////////////////////////////// -->
+    <script src="./JS/numeroDeSemana.js"></script>
+  </body>
 </html>

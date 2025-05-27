@@ -1,0 +1,179 @@
+body {
+  background-color: antiquewhite;
+}
+
+.principio {
+  position: absolute;
+  top: -0px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  position: fixed;
+  border: 5px double rgb(247, 241, 241);
+  background-color: rgb(91, 9, 9);
+  width: 90%;
+  border-radius: 1em;
+  color: white;
+  font-size: 1.5em;
+  padding-left: 1em;
+  font-style: italic;
+ 
+}
+
+.init {
+  margin-top: 2.5em;
+  margin-left: 1.5em;
+  border: 4px double brown;
+  width: 80%;
+  text-align: center;
+  color: brown;
+  font-style: italic;
+  padding: 0.2em;
+
+}
+
+.cita {
+  font-family: 'Times New Roman', Times, serif;
+  color: brown;
+  font-style: italic;
+  font-size: 1.5em;
+  margin-left: 1.5em;
+}
+
+.select{
+  width: 20em;
+  height: 2.5em;
+  font-size: 1.2em;
+  margin-left: 1.5em;
+  color: red;
+  text-align: center;
+}
+.select1{
+  width: 7em;
+  font-size: 0.7em;
+ 
+}
+
+.select>option{
+  color: blue;  
+}
+
+.cancion{
+  border: 4px solid brown;
+  border-radius: 1.5em;
+  font-size: 1.2em;
+  margin-left: 1.5em;
+  padding: 2em;
+  margin: 1em;
+ 
+}
+
+.nombre {
+  color: white;
+  font-size: 0.9em;
+  text-decoration: none;
+  margin-bottom: 0.5em;
+
+}
+
+.preCoro{
+  color: red;
+  font-size: 1.5em;
+  margin-top: 0;
+}
+
+.details{
+  background-color: brown;
+  color: white;
+  width: 80%;
+  margin: 1.5em;
+  font-size:1.5em ;
+  font-style: italic;
+}
+
+.pCoro{
+  margin-top: -1em;
+}
+
+.li {
+  border: 1px solid brown;
+  width: 90%;
+  margin: 0.4em;
+  font-size: 1.2em;
+  padding: 0.3em;
+  color: brown;
+}
+
+.li>a {
+  text-decoration: none;
+  color: blue;
+}
+
+.select1{
+  color: brown;
+}
+.img{
+  width: 2em;
+}
+
+.image{
+  width: 80%;
+}
+.footer {
+  border: green double 4px;
+  background-color: antiquewhite;
+  border-radius: 1em;
+  text-align: center;
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+
+.portada>img{
+  border: brown 4px double;
+  margin-top: 5.5em;
+  margin-left: 1em;
+  width: 85%;
+}
+.imageSub{
+  font-size: 2em;
+  text-align: center;
+  background-color: gray;
+  color: white;
+  width: 85%;
+  margin-left: 0.5em;
+}
+
+.studio {
+  color: brown;
+  font-style: italic;
+  font-size: 0.8em;
+}
+
+.boton {
+  background-color: brown;
+  color: white;
+  margin-left: 40%;
+  width: 17em;
+  height: 3.5em;
+  border-radius: 1em;
+  margin-top: 0.2em;
+  font-size: 0.6em;
+  margin-top: 1em;
+}
+
+.init {
+  margin-top: 2.5em;
+  border: 4px double brown;
+  width: 10em;
+  text-align: center;
+  color: brown;
+  font-style: italic;
+  padding: 0.2em;
+
+}
+.selector {
+  width: 50em;
+}
