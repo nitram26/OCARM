@@ -20,8 +20,8 @@
     </header>
     <br /><br />
     <!-- ********************************************* -->
-    <h1 class="init"></h1>
-    <h3 class="cita">" ". <br /> </h3>
+    <h1 class="init">Caminaré en Presencia del Señor</h1>
+    <h3 class="cita">"Caminaré en presencia del Señor en la tierra de los vivos ". <br /> Sal 116,9</h3>
 
     <!-- ********************************************* -->
     
@@ -31,8 +31,8 @@
           <li>CHORDA: </li>
           <li>SONUS: </li>
           <li>ACTIO: </li>
-          <li>Autor: </li>
-          <li>Tiempo:</li>
+          <li>Autor: J.A. Espinosa</li>
+          <li>Tiempo: Cuaresma</li>
         </ol>
         </details>
    
@@ -52,37 +52,45 @@
 
     <div class="cancion">
       <pre class="preCoro" id="L01"></pre>
-      <p class="pCoro"> </p>
+      <p class="pCoro">Caminaré </p>
 <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
       <pre class="preCoro" id="L02"></pre>
-      <p class="pCoro"> </p>
+      <p class="pCoro">En presencia del Señor. </p>
 <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
       <pre class="preCoro" id="L03"></pre>
-      <p class="pCoro"> </p>
+      <p class="pCoro">Amo al Señor. </p>
 <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 
       <pre class="preCoro" id="L04"></pre>
-      <p class="pCoro"> </p>
-<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+      <p class="pCoro">Porque escucha mi voz </p>
       <hr />
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
       <pre class="preCoro" id="L05"></pre>
-      <p class="pCoro"> </p>
+      <p class="pCoro">suplicante. </p>
 <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
       <pre class="preCoro" id="L06"></pre>
-      <p class="pCoro"> </p>
+      <p class="pCoro"> Porque inclina.</p>
 <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
       <pre class="preCoro" id="L07"></pre>
-      <p class="pCoro"> </p>
+      <p class="pCoro">Su oído </p>
 <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
       <pre class="preCoro" id="L08"></pre>
-      <p class="pCoro"> </p>
+      <p class="pCoro">Hacia mí. </p>
+ 
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+      <pre class="preCoro" id="L09"></pre>
+      <p class="pCoro">El día que lo invoco </p><hr><br>
+   
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+      <pre class="preCoro" id="L10"></pre>
+      <p class="pCoro">Caminaré. </p>
     </div>
 <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
  
 <!-- ////////////////////////////////////////////////////////////// -->
     <script>
-      const nota = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
-      const letras = ["C", "C#", "D","D#","E", "F","F#", "G", "G#", "A","A#","B", ];
+      const nota = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+      const letras = ["C","C#","D","D#","E", "F","F#", "G", "G#", "A","A#","B"];
       const esp = (n) => " ".repeat(n); // Espacios visuales
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 let sig = 'm'
@@ -95,15 +103,18 @@ let sig = 'm'
         const lin = transpuestas.map((x) => letras[x - 1]);
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         const acordes = {
-          L01: [lin[0]],
-          L02: [lin[0]],
-          L03: [lin[0]+sig, esp(0), lin[0]],
-          L04: [lin[0], esp(0), lin[0]],
-          L05: [lin[0], esp(0), lin[0]],
-          L06: [esp(0), lin[0]],
-          L07: [esp(0), lin[0]],
-          L08: [esp(0), lin[0]],
+          L01: [esp(0),lin[0]+sig, lin[11],],
+          L02: [esp(0),lin[0],esp(0), lin[0],esp(0),esp(0), lin[0],],
+          L03: [esp(0),lin[0],],
+          L04: [esp(0),lin[0], ],
+          L05: [esp(0),lin[0], ],
+          L06: [esp(0),lin[0],esp(0), ],
+          L07: [esp(0),lin[0],esp(0), ],
+          L08: [esp(0),lin[0],esp(0), lin[0]],
+          L09: [esp(0),lin[0],esp(0), lin[0]],
+          L10: [esp(0),lin[0],esp(0), lin[0]],
         };
+        //lin[0], esp(10),
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         for (const id in acordes) {
           document.getElementById(id).innerText = acordes[id].join(" ");
