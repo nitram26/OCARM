@@ -172,7 +172,11 @@ body {
   color: brown;
   font-style: italic;
   padding: 0.2em;
-
+ 
+}
+.init>a{
+  text-decoration: none;
+  color: brown;
 }
 .selector {
   width: 50em;
