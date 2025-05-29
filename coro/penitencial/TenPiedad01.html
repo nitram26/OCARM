@@ -15,24 +15,24 @@
         <a href="#alInicio"
           ><img src="../../media/ESCUDOCARM.png" alt="" class="img"
         /></a>
-        <a href="./index.html" class="nombre">INICIO </a>
-      </div>
+        <a href="../index.html" class="nombre">INICIO </a>
+      </div> 
     </header>
     <br /><br />
     <!-- ********************************************* -->
-    <h1 class="init"><a href="https://www.youtube.com/watch?v=yAkvcSxHfuY"> Caminaré en Presencia del Señor</a></h1>
-    <h3 class="cita">"Caminaré en presencia del Señor en la tierra de los vivos ". <br /> Sal 116,9</h3>
+    <h1 class="init"><a href="https://www.youtube.com/watch?v=5KxbtIcgjb8" target="_blank">TEN PIEDAD 01 <img src="../../media/tube.png" alt="" class="img"></a></h1>
+    <h3 class="cita">"Indiscutiblemente grande es el misterio de la piedad ". <br />1 Tm 3,16 </h3>
 
     <!-- ********************************************* -->
     
         <details class="details">
           <summary>Orden Seglar Carmelita</summary>
         <ol>
-          <li>CHORDA:E </li>
-          <li>SONUS: </li>
-          <li>ACTIO: </li>
-          <li>Autor: J.A. Espinosa</li>
-          <li>Tiempo: Cuaresma</li>
+          <li>CHORDA: B</li>
+          <li>SONUS: 111 </li>
+          <li>ACTIO: 1>1</li>
+          <li>Autor: Inv</li>
+          <li>Tiempo: 1</li>
         </ol>
         </details>
    
@@ -40,7 +40,7 @@
     </ol>
     <span for="transposicion" class="cita">Elegir Acordes</span>
     <select id="transposicion" class="select">
-      <option value=" ">SELECCIONAR</option>
+      <option value="">SELECCIONAR</option>
       <option value="0">C</option>
       <option value="2">D</option>
       <option value="4">E</option>
@@ -52,48 +52,41 @@
 
     <div class="cancion">
       <pre class="preCoro" id="L01"></pre>
-      <p class="pCoro"> Caminaré </p>
+      <p class="pCoro">Señor ten piedad, Señor ten piedad </p>
 <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
       <pre class="preCoro" id="L02"></pre>
-      <p class="pCoro">En presencia del Señor. </p>
+      <p class="pCoro">Señor ten piedad, ten piedad (2) </p> <hr> <br>
 <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
       <pre class="preCoro" id="L03"></pre>
-      <p class="pCoro"> Amo al Señor. </p>
+      <p class="pCoro">Cristo ten piedad, ten piedad, ten piedad </p>
 <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 
       <pre class="preCoro" id="L04"></pre>
-      <p class="pCoro">Porque escucha  </p>
-      <hr />
+      <p class="pCoro"> Cristo ten piedad, ten piedad, ten piedad</p>
 <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
       <pre class="preCoro" id="L05"></pre>
-      <p class="pCoro">mi voz suplicante. </p>
+      <p class="pCoro"> Cristo ten piedad, ten piedad, ten piedad</p>
 <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
       <pre class="preCoro" id="L06"></pre>
-      <p class="pCoro"> Porque inclina.</p>
+      <p class="pCoro">Ten Piedad
+      </p><hr><br>
 <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
       <pre class="preCoro" id="L07"></pre>
-      <p class="pCoro"> Su oído Hacia mí.</p>
+      <p class="pCoro">Señor ten piedad, Señor ten piedad
+      </p>
 <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
       <pre class="preCoro" id="L08"></pre>
-      <p class="pCoro">El día que lo invoco  </p><hr><br>
- 
-<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-      <pre class="preCoro" id="L09"></pre>
-      <p class="pCoro">Caminaré. </p>
-   
-<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-      <pre class="preCoro" id="L10"></pre>
-      <p class="pCoro"> </p>
+      <p class="pCoro">Señor ten piedad, ten piedad  </p>
+      <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
     </div>
-<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
  
 <!-- ////////////////////////////////////////////////////////////// -->
     <script>
-      const nota = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
-      const letras = ["C","C#","D","D#","E", "F","F#", "G", "G#", "A","A#","B"];
+      const nota = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+      const letras = ["C", "C#", "D","D#","E", "F","F#", "G", "G#", "A","A#","B", ];
       const esp = (n) => " ".repeat(n); // Espacios visuales
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-let sig = ['m', '7']
+let sig = 'm'
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
       // Esta función actualiza los acordes mostrados según la transposición `n`
       function actualizarAcordes(n) {
@@ -103,18 +96,18 @@ let sig = ['m', '7']
         const lin = transpuestas.map((x) => letras[x - 1]);
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         const acordes = {
-          L01: [lin[0]+sig[0], esp(1), lin[10],],
-          L02: [esp(0),lin[8],esp(0), lin[7]+sig[1],esp(0), lin[0]+sig[0],],
-          L03: [esp(0),lin[0]+sig[0],],
-          L04: [esp(4),lin[10], ],
-          L05: [esp(4),lin[0], ],
-          L06: [esp(0),lin[0]+sig[0], ],
-          L07: [esp(1),lin[10],esp(2),lin[8], ],
-          L08: [esp(1),lin[7]+sig[1],esp(2), lin[0]+sig[0]],
-          L09: [esp(0),lin[0]+sig[0],esp(0), lin[10]],
-         
+          L01: [lin[0]+sig[0], lin[5]+sig[0],esp(2), lin[10],esp(1), lin[3],esp(3), lin[8],],
+          L02: [esp(0),lin[5]+sig[0], esp(4), lin[7],esp(3), lin[0]+sig[0],],
+
+          L03: [lin[0]+sig[0], esp(4), lin[5]+sig[0],esp(11), lin[10],],
+          L04: [esp(8),lin[3], esp(11), lin[8],],
+          L05: [lin[5]+sig[0], esp(18), lin[7],],
+          L06: [esp(4), lin[0]+sig[0],],
+
+          L07: [lin[0]+sig[0],lin[5]+sig[0],esp(2), lin[10],esp(1), lin[3],esp(4), lin[8],],
+          L08: [esp(0),lin[5]+sig[0], esp(4), lin[7],esp(3), lin[0]+sig[0],],
+          //
         };
-        //lin[0], esp(10),
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         for (const id in acordes) {
           document.getElementById(id).innerText = acordes[id].join(" ");
@@ -122,7 +115,7 @@ let sig = ['m', '7']
       }
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
  // Actualizar al cargar
- actualizarAcordes(4); // Valor por defecto: +2
+ actualizarAcordes(11); // Valor por defecto: +2
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
       // Evento de cambio en el select
       document
