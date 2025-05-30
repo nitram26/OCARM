@@ -54,6 +54,8 @@ body {
 .select1{
   width: 7em;
   font-size: 0.7em;
+  background-color: rgb(112, 5, 5);
+  color: white;
  
 }
 
@@ -112,9 +114,6 @@ body {
   color: blue;
 }
 
-.select1{
-  color: brown;
-}
 .img{
   width: 2em;
   border-radius: 0.5em;
