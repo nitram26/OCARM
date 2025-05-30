@@ -20,18 +20,19 @@
     </header>
     <br /><br />
     <!-- ********************************************* -->
-    <h1 class="init"><a href="">  <img src="../../media/tube.png" alt="" class="img"></a></h1>
-    <h3 class="cita">" ". <br /> </h3>
+    <h1 class="init"><a href="https://www.youtube.com/watch?v=Nk2F7Q70MX0"> Entre Tus Manos <img src="../../media/tube.png" alt="" class="img"></a></h1>
+    <h3 class="cita">"En verdad, en verdad os digo: si el grano de trigo no cae en tierra y muere,
+      queda él solo; pero si muere, da mucho fruto.  ". <br /> Jn 12,24</h3>
 
     <!-- ********************************************* -->
     
         <details class="details">
           <summary>Orden Seglar Carmelita</summary>
         <ol>
-          <li>CHORDA: </li>
-          <li>SONUS: </li>
-          <li>ACTIO: </li>
-          <li>Autor: </li>
+          <li>CHORDA:D </li>
+          <li>SONUS: 027</li>
+          <li>ACTIO: 10-1 1-1</li>
+          <li>Autor: Santiago Fernández</li>
           <li>Tiempo: Ordinario</li>
         </ol>
         </details>
@@ -52,30 +53,29 @@
 
     <div class="cancion">
       <pre class="preCoro" id="L01"></pre>
-      <p class="pCoro"> </p>
+      <p class="pCoro"> Entre Tus manos está mi vida, Señor.</p>
 <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
       <pre class="preCoro" id="L02"></pre>
-      <p class="pCoro"> </p>
+      <p class="pCoro"> Entre Tus manos pongo mi existir.</p>
 <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
       <pre class="preCoro" id="L03"></pre>
-      <p class="pCoro"> </p>
+      <p class="pCoro">Hay que morir,  para vivir. </p>
 <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-
       <pre class="preCoro" id="L04"></pre>
-      <p class="pCoro"> </p>
+      <p class="pCoro"> Entre Tus manos  confío mi ser</p>
 <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
       <hr />
       <pre class="preCoro" id="L05"></pre>
-      <p class="pCoro"> </p>
+      <p class="pCoro"> Si el grano de trigo no muere,</p>
 <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
       <pre class="preCoro" id="L06"></pre>
-      <p class="pCoro"> </p>
+      <p class="pCoro">   si no muere solo quedará, </p>
 <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
       <pre class="preCoro" id="L07"></pre>
-      <p class="pCoro"> </p>
+      <p class="pCoro"> pero si muere en abundancia dará</p>
 <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
       <pre class="preCoro" id="L08"></pre>
-      <p class="pCoro"> </p>
+      <p class="pCoro">  un fruto eterno que no morirá. </p>
       <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
     </div>
  
@@ -95,15 +95,15 @@ let sig = ['m', 7]
         const lin = transpuestas.map((x) => letras[x - 1]);
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         const acordes = {
-          L01: [lin[0], esp(0), lin[0],],
-          L02: [lin[0], esp(0), lin[0],],
-          L03: [lin[0], esp(0), lin[0],],
-          L04: [lin[0], esp(0), lin[0],],
+          L01: [lin[0], esp(1), lin[2]+sig[0],esp(0), lin[7]+sig[1],esp(0), lin[0],esp(0), lin[4]+sig[0],],
+          L02: [lin[9]+sig[0], esp(0), lin[2]+sig[0],esp(0), lin[7]+sig[1],esp(3), lin[0],],
+          L03: [lin[0], esp(3), lin[5],lin[7]+sig[1],esp(0), lin[0],esp(0), lin[4]+sig[0],],
+          L04: [lin[9]+sig[0], esp(1), lin[2]+sig[0],esp(0), lin[7]+sig[1],esp(0), lin[0], lin[5], lin[0],],
           //
-          L05: [lin[0], esp(0), lin[0],],
-          L06: [lin[0], esp(0), lin[0],],
-          L07: [lin[0], esp(0), lin[0],],
-          L08: [lin[0], esp(0), lin[0],],
+          L05: [lin[7], esp(0), lin[2]+sig[0], lin[7]+sig[1],esp(2), lin[0],esp(0), lin[4]+sig[0],],
+          L06: [lin[9]+sig[0],lin[2]+sig[0],lin[7],esp(2), lin[4]+sig[0],],
+          L07: [lin[9]+sig[0], esp(0), lin[2]+sig[0],esp(0), lin[7]+sig[1],esp(0), lin[0],esp(0), lin[4]+sig[0],],
+          L08: [lin[9]+sig[0], esp(0), lin[2]+sig[0],lin[7]+sig[1],esp(2), lin[0], lin[5],],
           //
         };
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -113,7 +113,7 @@ let sig = ['m', 7]
       }
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
  // Actualizar al cargar
- actualizarAcordes(0); // Valor por defecto: +2
+ actualizarAcordes(2); // Valor por defecto: +2
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
       // Evento de cambio en el select
       document

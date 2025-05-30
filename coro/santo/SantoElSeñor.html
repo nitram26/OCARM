@@ -21,17 +21,17 @@
     <br /><br />
     <!-- ********************************************* -->
     <h1 class="init"><a href="">  <img src="../../media/tube.png" alt="" class="img"></a></h1>
-    <h3 class="cita">" ". <br /> </h3>
+    <h3 class="cita">" Los cuatro Vivientes tienen cada uno seis alas, están llenos de ojos todo alrededor y por dentro, y repiten sin descanso día y noche: «Santo, Santo, Santo, Señor, Dios Todopoderoso, “Aquel que era, que es y que va a venir”.» ". <br />Ap 4,8 </h3>
 
     <!-- ********************************************* -->
     
         <details class="details">
           <summary>Orden Seglar Carmelita</summary>
         <ol>
-          <li>CHORDA: </li>
-          <li>SONUS: </li>
-          <li>ACTIO: </li>
-          <li>Autor: </li>
+          <li>CHORDA:Am </li>
+          <li>SONUS:033 </li>
+          <li>ACTIO: 1-1</li>
+          <li>Autor: Padre Mario</li>
           <li>Tiempo: Ordinario</li>
         </ol>
         </details>
@@ -52,30 +52,29 @@
 
     <div class="cancion">
       <pre class="preCoro" id="L01"></pre>
-      <p class="pCoro"> </p>
+      <p class="pCoro"> Santo es el Señor mi Dios </p>
 <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
       <pre class="preCoro" id="L02"></pre>
-      <p class="pCoro"> </p>
+      <p class="pCoro">Digno de alabanza,  </p>
 <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
       <pre class="preCoro" id="L03"></pre>
-      <p class="pCoro"> </p>
+      <p class="pCoro"> A Él poder, el honor y la gloria (2v).</p>
 <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-
+<hr />
       <pre class="preCoro" id="L04"></pre>
-      <p class="pCoro"> </p>
+      <p class="pCoro">Hosanna (Hosanna), Hosanna (Hosanna), </p>
 <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-      <hr />
       <pre class="preCoro" id="L05"></pre>
-      <p class="pCoro"> </p>
+      <p class="pCoro"> Hosanna, oh Señor. (2v)</p><hr />
 <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
       <pre class="preCoro" id="L06"></pre>
-      <p class="pCoro"> </p>
+      <p class="pCoro"> Bendito el que viene </p>
 <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
       <pre class="preCoro" id="L07"></pre>
-      <p class="pCoro"> </p>
+      <p class="pCoro"> En nombre del Señor, </p>
 <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
       <pre class="preCoro" id="L08"></pre>
-      <p class="pCoro"> </p>
+      <p class="pCoro"> Con todos los Santos cantamos para ti (2v).</p>
       <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
     </div>
  
@@ -95,15 +94,16 @@ let sig = ['m', 7]
         const lin = transpuestas.map((x) => letras[x - 1]);
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         const acordes = {
-          L01: [lin[0], esp(0), lin[0],],
-          L02: [lin[0], esp(0), lin[0],],
-          L03: [lin[0], esp(0), lin[0],],
-          L04: [lin[0], esp(0), lin[0],],
-          //
-          L05: [lin[0], esp(0), lin[0],],
-          L06: [lin[0], esp(0), lin[0],],
-          L07: [lin[0], esp(0), lin[0],],
-          L08: [lin[0], esp(0), lin[0],],
+          L01: [lin[0]+sig[0], esp(4), lin[10],],
+          L02: [lin[8], esp(4), lin[7],],
+          L03: [lin[0]+sig[0], esp(0), lin[10], esp(0), lin[8], esp(3), lin[7]+sig[0], esp(0), lin[7],],
+
+          L04: [lin[0]+sig[0], esp(9), lin[10],],
+          L05: [lin[8], esp(3), lin[7]+sig[0], esp(0), lin[7],],
+
+          L06: [lin[0]+sig[0], esp(4), lin[10],],
+          L07: [lin[8], esp(7), lin[7],],
+          L08: [lin[0]+sig[0], esp(0), lin[10], esp(0), lin[8], esp(4), lin[7]+sig[0], esp(0), lin[7],],
           //
         };
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -113,7 +113,7 @@ let sig = ['m', 7]
       }
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
  // Actualizar al cargar
- actualizarAcordes(0); // Valor por defecto: +2
+ actualizarAcordes(9); // Valor por defecto: +2
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
       // Evento de cambio en el select
       document
