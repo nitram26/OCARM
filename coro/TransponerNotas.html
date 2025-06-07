@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="../indexCoro.css">
+    <title>Transponer de Notas</title>
+    <style>
+      .btn{
+        font-size: 1.5em;
+        background-color: brown;
+        color: white;
+        margin-left: 3em;
+        border-radius: 0.5em;
+        height: 2.5em;
+        margin: 1em;
+      
+      }
+
+      .titulo{
+        text-align: center;
+        background-color: brown;
+        border: 5px double white;
+        color: white;
+        padding: 0.3em;
+        border-radius: 0.7em;
+      }
+
+      .invisible{
+        color: antiquewhite;
+      }
+      .mapeo{
+        background-color: brown;
+        color: white;
+        padding: 0.5em;
+        border-radius: 0.5em;
+        margin: 1em auto;
+        width: 10em;
+        text-align: center;
+        font-size: 1.5em;
+        margin-bottom: 5em;
+      }
+      .dos{
+        display: flex;
+      }
+      .cita{
+        margin-bottom: 0;
+      }
+     .select{
+      margin-top: -1em;
+     }
+         </style>
+  </head>
+  <body>
+    <h1 class="titulo">Transponer de Notas</h1>
+
+    <h2 class="cita">Notas originales (separadas por espacio):</h2>
+    <br />
+    <input id="inputNotes" rows="4" cols="50" placeholder="NOTAS" class="select"></input> <hr> <br>
+   <div class="uno">
+
+     
+     <select id="originalKey" class="select">
+       <option value="">TONALIDAD ORIGINAL</option>
+       <option value="C">C</option>
+       <option value="D">D</option>
+       <option value="E">E</option>
+       <option value="F">F</option>
+       <option value="G">G</option>
+       <option value="A">A</option>
+       <option value="B">B</option>
+      </select> <br><br>
+      
+      <select id="targetKey" class="select">
+        <option value="">TONALIDAD DE DESTINO</option>
+        <option value="C">C</option>
+        <option value="D">D</option>
+        <option value="E">E</option>
+        <option value="F">F</option>
+        <option value="G">G</option>
+        <option value="A">A</option>
+        <option value="B">B</option>
+      </select>
+      
+    </div>
+   <div class="dos">
+
+     <button onclick="transpose()" class="btn">Transponer</button>
+     
+     <!-- Notas no se ven por el bg -->
+      <div class="nota">
+        <div id="output" class="invisible"></div>
+        
+        <div id="mapping" class="mapeo"></div>
+      </div>
+      
+     
+     </div>
+     <!-- /////////////////////////////////////////// -->
+    <script>
+    const NOTES = [
+    { note: "C", value: 0 },
+    { note: "C#", value: 1 },
+    { note: "D", value: 2 },
+    { note: "D#", value: 3 },
+    { note: "E", value: 4 },
+    { note: "F", value: 5 },
+    { note: "F#", value: 6 },
+    { note: "G", value: 7 },
+    { note: "G#", value: 8 },
+    { note: "A", value: 9 },
+    { note: "A#", value: 10 },
+    { note: "B", value: 11 }
+  ];
+      
+      
+      function transpose() {
+        const inputNotes = document
+          .getElementById("inputNotes")
+          .value.trim()
+          .split(/\s+/);
+        const originalKey = document.getElementById("originalKey").value;
+        const targetKey = document.getElementById("targetKey").value;
+
+        const originalIndex = NOTES.find(n => n.note === originalKey)?.value;
+    const targetIndex = NOTES.find(n => n.note === targetKey)?.value;
+    if (originalIndex === undefined || targetIndex === undefined) return;
+
+       const shift = (targetIndex - originalIndex + 12) % 12;
+
+        let transposedNotes = [];
+        let mappings = [];
+
+        inputNotes.forEach((note) => {
+      let noteObj = NOTES.find(n => n.note === note);
+      if (!noteObj) {
+        transposedNotes.push(note);
+        mappings.push(`${note} → (sin cambio)`);
+      } else {
+        let newIndex = (noteObj.value + shift) % 12;
+        let newNoteObj = NOTES.find(n => n.value === newIndex);
+        transposedNotes.push(newNoteObj.note);
+        mappings.push(`${note} (${noteObj.value}) → ${newNoteObj.note} (${newIndex})`);
+      }
+    });
+
+    document.getElementById("output").innerText = transposedNotes.join(" ");
+    document.getElementById("mapping").innerHTML = mappings.map(m => `<div>${m}</div>`).join("");
+  }
+    </script>
+  </body>
+</html>
