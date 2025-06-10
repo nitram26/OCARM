@@ -119,6 +119,13 @@ body {
   border-radius: 0.5em;
 }
 
+.img1{
+  width: 50%;
+  margin: 1em;
+  border: 4px solid brown;
+  border-radius: 1em;
+}
+
 .image{
   width: 80%;
 }
