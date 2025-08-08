@@ -98,8 +98,10 @@
           <summary>Orden Seglar Carmelita</summary>
         <ol>
           <li>CHORDA: </li>
-          <li>SONUS: </li>
-          <li>Autor: Jesús de Nazareth</li>
+          <li>SONUS: </li> 
+          <li>Autor: Jesús </li><br>
+          <li>Partitura: <a href="../../media/partituras/PaterNoster.png" class="partituraCanto">Gregoriano</a></li>
+          <li>Revisar: <a href="../../media/partituras/pater1.png" class="partituraCanto">Pater1</a> <br> <a href="../../media/partituras/Pater2.png" class="partituraCanto">Pater2</a></li>
         </ol>
         </details>
    
@@ -150,7 +152,7 @@
       <pre class="preCoro" id="L10"></pre>
       <p class="pCoro">sed líbera nos a malo. </p>
       <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-      <pre class="preCoro" id="L08"></pre>
+      <pre class="preCoro" id="L11"></pre>
       <p class="pCoro">Amén </p>
       <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
     </div>
@@ -171,15 +173,18 @@ let sig = ['m', 7]
         const lin = transpuestas.map((x) => letras[x - 1]);
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         const acordes = {
-          L01: [lin[0], esp(0), lin[0],],
-          L02: [lin[0], esp(0), lin[0],],
-          L03: [lin[0], esp(0), lin[0],],
-          L04: [lin[0], esp(0), lin[0],],
+          L01: [lin[0], esp(1), lin[7],esp(1),lin[9],esp(1), lin[4]+sig[0]],
+          L02: [lin[5], esp(0), lin[0],esp(2), lin[2]+sig[0], esp(0), lin[7],],
+          L03: [lin[0], esp(1), lin[7],esp(1), lin[9]+sig[0], esp(0), lin[4]+sig[0]],
+          L04: [lin[5], esp(1), lin[0],esp(1), lin[7], esp(0)],
           //
-          L05: [lin[0], esp(0), lin[0],],
-          L06: [lin[0], esp(0), lin[0],],
-          L07: [lin[0], esp(0), lin[0],],
-          L08: [lin[0], esp(0), lin[0],],
+          L05: [, lin[4]+sig[0]],
+          L06: [lin[9], esp(1), lin[4]+sig[0],esp(1), lin[5], esp(0), lin[0]],
+          L07: [lin[2]+sig[0], esp(1), lin[7],esp(1), lin[0], esp(1), lin[9]+sig[0]],
+          L08: [lin[5], esp(1), lin[0],esp(1), lin[2]+sig[0], esp(1), lin[7]],
+          L09: [lin[0], esp(1), lin[7],esp(1), lin[9]+sig[0], esp(1), lin[4]+sig[0]],
+          L10: [lin[5], esp(1), lin[0],esp(1), lin[7], esp(1), lin[0]],
+          L11: [lin[0],],
           //
         };
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -199,5 +204,6 @@ let sig = ['m', 7]
           actualizarAcordes(valor);
         });
     </script>
+
   </body>
 </html>
