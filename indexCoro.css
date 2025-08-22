@@ -216,10 +216,15 @@ hr {
   font-size: 1.5em;
   padding-left: 1em;
   font-style: italic;
-    
 }
+/* hace que el titulo no quede debajo del header */
 section {
   padding-top: 80px;
   margin-top: -80px;
+}
+
+/* para index relación de carmelitas */
+.summary {
+  color: black;
 }
 
