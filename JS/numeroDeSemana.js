@@ -28,7 +28,9 @@ document.getElementById('info-button').addEventListener('click', () => {
     const mensaje = `
         📅 Hoy es ${fechaFormateada}. <br>
         📌 Semana ${weekNumber} del año ${year}. <br>
-        ⏳ Han pasado ${daysPassed} días.
+        ⏳ Han pasado ${daysPassed} días. <br>
+        📖 Quedan ${365-daysPassed} días para Iniciar el año ${year+1}. <br>
+
     `;
 
     // Mostrar o esconder el mensaje
