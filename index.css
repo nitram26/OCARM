@@ -1,6 +1,4 @@
-body{
-  background-color: antiquewhite;
-}
+
 
 .button{
     font-size: 1.25em;
@@ -12,7 +10,7 @@ body{
     color: white;
     background-color: blueviolet;
 
-}
+}  
 
 .ol{
     margin-top: 3em;
