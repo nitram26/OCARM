@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../../indexCoro.css" />
     <title>CORO</title>
+    <style>
+      a{
+        text-decoration: none;
+        color: blue;
+      }
+    </style>
   </head>
   <body>
     <p class="pCoro" id="alInicio" class="principio"></p>
@@ -89,13 +95,18 @@
     </header>
     <br /><br />
     <!-- ********************************************* -->
-    <h1 class="init"><a href="" target="_blank">  <img src="../../media/tube.png" alt="" class="img"></a></h1>
-    <h3 class="cita">" ". <br /> </h3>
+    <h1 class="init">Aleluya 01 <a href="" target="_blank">  </a></h1>
+    <h3 class="cita">"¡Aleluya!¡Dad gracias a Yahwéh porque es bueno, porque es eterna su misericordia! Sal 106,1 ". <br /> </h3>
 
     <!-- ********************************************* -->
     
         <details class="details">
           <summary>Orden Seglar Carmelita</summary>
+        <ol>
+          <li>CHORDA: </li>
+          <li>SONUS: </li>
+          <li>Autor: </li>
+        </ol>
         <ol>
           <li>CHORDA: </li>
           <li>SONUS: </li>
@@ -116,40 +127,41 @@
       <option value="9">A</option>
       <option value="11">B</option>
     </select>
-
     <div class="cancion">
+      <H3><a href="https://www.youtube.com/shorts/wZjSH4YqY2o " target="_blank"><img src="../../media/tube.png" alt="" class="img">ALELUYA 01</a></H3>
       <pre class="preCoro" id="L01"></pre>
-      <p class="pCoro"> </p>
+      <p class="pCoro">Aleluya, aleluya, aleluya, aleluya  </p>
 <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+ <hr /><H3><a href="https://www.youtube.com/watch?v=i9vGRjuxdVg "target="_blank"><img src="../../media/tube.png" alt="" class="img">ALELUYA 02</a></H3>
       <pre class="preCoro" id="L02"></pre>
-      <p class="pCoro"> </p>
+      <p class="pCoro">Aleluya, aleluya, aleluya  </p>
 <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+  <hr /><H3><a href="https://www.youtube.com/watch?v=qG95qyPJJv4"target="_blank"><img src="../../media/tube.png" alt="" class="img">ALELUYA 03</a></H3>
       <pre class="preCoro" id="L03"></pre>
-      <p class="pCoro"> </p>
+      <p class="pCoro">Aleluya, aleluya, aleluya </p>
 <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-
+ <hr /><H3><a href="https://www.youtube.com/shorts/IYrzdPCkNk0 "target="_blank"><img src="../../media/tube.png" alt="" class="img">ALELUYA 04</a></H3>
       <pre class="preCoro" id="L04"></pre>
-      <p class="pCoro"> </p>
+      <p class="pCoro">Aleluya, aleluya, aleluya, aleluya </p>
 <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-      <hr />
+      <hr /> <H3><a href="https://www.youtube.com/shorts/S1jX1PshlW0 "target="_blank"><img src="../../media/tube.png" alt="" class="img">ALELUYA 05</a></H3>
       <pre class="preCoro" id="L05"></pre>
-      <p class="pCoro"> </p>
+      <p class="pCoro"> Aleluya, aleluya, aleluya. aleluya</p>
 <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+  <hr /><H3><a href="https://www.youtube.com/watch?v=1YWqWF5euo8"target="_blank"><img src="../../media/tube.png" alt="" class="img">ALELUYA 06</a></H3>
       <pre class="preCoro" id="L06"></pre>
-      <p class="pCoro"> </p>
+      <p class="pCoro">Aleluya, aleluya, aleluya </p>
 <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+  <hr /><H3><a href="https://www.youtube.com/watch?v=QSrvAJC1Ov0"target="_blank"><img src="../../media/tube.png" alt="" class="img">ALELUYA 07</a></H3>
       <pre class="preCoro" id="L07"></pre>
-      <p class="pCoro"> </p>
+      <p class="pCoro">Aleluya, aleluya, aleluya </p>
 <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-      <pre class="preCoro" id="L08"></pre>
-      <p class="pCoro"> </p>
-      <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-    </div>
+  
  
 <!-- ////////////////////////////////////////////////////////////// -->
     <script>
       const nota = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
-      const letras = ["C", "C#", "D","D#","E", "F","F#", "G", "G#", "A","A#","B", ];
+      const letras = ["C","C#", "D","D#", "E", "F","F#", "G", "G#", "A","A#","B", ];
       const esp = (n) => " ".repeat(n); // Espacios visuales
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 let sig = ['m', 7]
@@ -162,15 +174,21 @@ let sig = ['m', 7]
         const lin = transpuestas.map((x) => letras[x - 1]);
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         const acordes = {
-          L01: [lin[0], esp(0), lin[0],],
-          L02: [lin[0], esp(0), lin[0],],
-          L03: [lin[0], esp(0), lin[0],],
-          L04: [lin[0], esp(0), lin[0],],
-          //
-          L05: [lin[0], esp(0), lin[0],],
-          L06: [lin[0], esp(0), lin[0],],
-          L07: [lin[0], esp(0), lin[0],],
-          L08: [lin[0], esp(0), lin[0],],
+          L01: [lin[1]+sig[0], esp(2), lin[11], esp(0), lin[1]+sig[0], esp(3),lin[11], esp(0), lin[1]+sig[0],],
+          // +++++++++++++++++
+          L02: [lin[1]+sig[0], esp(1), lin[11],esp(0), lin[9], lin[8]+sig[1], lin[1]+sig[0],],
+           // +++++++++++++++++
+          L03: [lin[4], esp(3), lin[1]+sig[0], esp(0), lin[9], esp(0), lin[11]+sig[1],],
+           // +++++++++++++++++
+          L04: [lin[1]+sig[0], lin[8]+sig[0], esp(0), lin[1]+sig[0], lin[8]+sig[0],lin[4], esp(1), lin[8], lin[9],lin[11]+sig[1], lin[1]+sig[0],],
+          // // +++++++++++++++++
+          L05: [lin[9], esp(3), lin[4], esp(0), lin[9],lin[2], esp(0), lin[9], lin[4], esp(0), lin[9],],
+           // +++++++++++++++++
+          L06: [lin[4], esp(5), lin[9],lin[4],lin[11], lin[4],],
+           // +++++++++++++++++
+          L07: [lin[4], esp(2), lin[1]+sig[0], esp(1), lin[6]+sig[0], esp(0), lin[11]+sig[1],],
+           // +++++++++++++++++
+        
           //
         };
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -180,7 +198,7 @@ let sig = ['m', 7]
       }
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
  // Actualizar al cargar
- actualizarAcordes(0); // Valor por defecto: +2
+ actualizarAcordes(4); // Valor por defecto: +2
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
       // Evento de cambio en el select
       document
