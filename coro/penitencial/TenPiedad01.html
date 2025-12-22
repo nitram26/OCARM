@@ -98,8 +98,15 @@
           <summary>Orden Seglar Carmelita</summary>
         <ol>
           <li>CHORDA: B-111</li>
-          <li>SONUS: 1T [B-A] </li>
-          <li>Autor: Inv</li>
+          <li>SONUS: 2T // 3T <br>
+            * || * <br>
+            + || * <br>
+            &&&&&&&&&&&& <br><br>
+            *||* <br>
+            +||*+* <br>
+
+          </li>
+          <li>Autor: 0</li> <br>
         </ol>
         </details>
    
@@ -153,7 +160,8 @@
       const letras = ["C", "C#", "D","D#","E", "F","F#", "G", "G#", "A","A#","B", ];
       const esp = (n) => " ".repeat(n); // Espacios visuales
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-let sig = 'm'
+let sig = ['m', 7,'#', '.', ',', ';',]
+//0=m 1=7 2=# 3=. 4=, 5=;
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
       // Esta función actualiza los acordes mostrados según la transposición `n`
       function actualizarAcordes(n) {
@@ -163,16 +171,16 @@ let sig = 'm'
         const lin = transpuestas.map((x) => letras[x - 1]);
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         const acordes = {
-          L01: [lin[0]+sig[0], lin[5]+sig[0],esp(2), lin[10],esp(1), lin[3],esp(3), lin[8],],
-          L02: [esp(0),lin[5]+sig[0], esp(4), lin[7],esp(3), lin[0]+sig[0],],
+          L01: [lin[0]+sig[0]+sig[3], lin[5]+sig[0],esp(2), lin[10]+sig[4],esp(1), lin[3],esp(3), lin[8]+sig[3]],
+          L02: [esp(0),lin[5]+sig[0], esp(4), lin[7]+sig[3],esp(3), lin[0]+sig[0]+sig[3],],
 
-          L03: [lin[0]+sig[0], esp(4), lin[5]+sig[0],esp(11), lin[10],],
-          L04: [esp(8),lin[3], esp(11), lin[8],],
+          L03: [lin[0]+sig[0]+sig[3], esp(4), lin[5]+sig[0],esp(11), lin[10]+sig[4],],
+          L04: [esp(8),lin[3], esp(11), lin[8]+sig[4]],
           L05: [lin[5]+sig[0], esp(18), lin[7],],
-          L06: [esp(4), lin[0]+sig[0],],
+          L06: [esp(4), lin[0]+sig[0]+sig[3],],
 
-          L07: [lin[0]+sig[0],lin[5]+sig[0],esp(2), lin[10],esp(1), lin[3],esp(4), lin[8],],
-          L08: [esp(0),lin[5]+sig[0], esp(4), lin[7],esp(3), lin[0]+sig[0],],
+          L07: [lin[0]+sig[0]+sig[3],lin[5]+sig[0],esp(2), lin[10]+sig[4],esp(1), lin[3],esp(4), lin[8]+sig[4]],
+          L08: [esp(0),lin[5]+sig[0], esp(4), lin[7]+sig[3],esp(3), lin[0]+sig[0]+sig[3],],
           //
         };
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
