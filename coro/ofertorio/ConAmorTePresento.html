@@ -97,9 +97,12 @@
         <details class="details">
           <summary>Orden Seglar Carmelita</summary>
         <ol>
-          <li>CHORDA: </li>
-          <li>SONUS: </li>
-          <li>Autor: </li>
+          <li>CHORDA:C,27 Bio 0 </li>
+          <li>SONUS:T3 <br>
+          * ||* <br>
+          + ||* *<br>
+          </li>
+          <li>Autor:0 </li>
         </ol>
         </details>
    
@@ -139,7 +142,7 @@
       <p class="pCoro"> La viña, el racimo, el trigal,</p>
 <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
       <pre class="preCoro" id="L07"></pre>
-      <p class="pCoro">El pan de mi hogar, te presento con amor. </p><hr /><hr />
+      <p class="pCoro">El pan de mi hogar, te presento con amor. </p><hr />
 <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
       <pre class="preCoro" id="L08"></pre>
       <p class="pCoro">Con mis manos abiertas a ti,  </p>
@@ -202,16 +205,32 @@ let sig = ['m', 7,'#', '.', ',', ';',]
         const lin = transpuestas.map((x) => letras[x - 1]);
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         const acordes = {
-          L01: [lin[0], esp(0), lin[0],],
-          L02: [lin[0], esp(0), lin[0],],
-          L03: [lin[0], esp(0), lin[0],],
-          L04: [lin[0], esp(0), lin[0],],
+          L01: [lin[1]+sig[4], ],
+          L02: [esp(8), lin[10]+sig[0]+sig[3],],
+          L03: [esp(8),lin[8], esp(4), lin[1]+sig[3],],
           //
-          L05: [lin[0], esp(0), lin[0],],
-          L06: [lin[0], esp(0), lin[0],],
-          L07: [lin[0], esp(0), lin[0],],
+          L04: [esp(4), lin[1]+sig[4],],
+          L05: [esp(),lin[5]+sig[3], esp(5), lin[10]+sig[0]+sig[3],],
+          L06: [esp(2),lin[8], esp(8), lin[5]+sig[3],],
+          L07: [esp(9),lin[6], esp(6), lin[8], esp(1), lin[1]+sig[3],],
+          //
+          L08: [lin[1]+sig[4], ],
+          L09: [esp(8), lin[10]+sig[0]+sig[3],],
+          L10: [esp(8),lin[8], esp(4), lin[1]+sig[3],],
+          L11: [esp(4), lin[1]+sig[4],],
+          L12: [esp(),lin[5]+sig[3], esp(5), lin[10]+sig[3],],
+          L13: [esp(2),lin[8], esp(8), lin[5]+sig[3],],
+          L14: [esp(9),lin[6], esp(6), lin[8], esp(1), lin[1]+sig[3],],
+          //
+          L15: [lin[1]+sig[4], ],
+          L16: [esp(8), lin[10]+sig[0]+sig[3],],
+          L17: [esp(8),lin[8], esp(4), lin[1]+sig[3],],
+          L18: [esp(4), lin[1]+sig[4],],
+          L19: [esp(),lin[5]+sig[3], esp(5), lin[10]+sig[3],],
+          L20: [esp(2),lin[8], esp(8), lin[5]+sig[3],],
+          L21: [esp(9),lin[6], esp(6), lin[8], esp(1), lin[1]+sig[3],],
+          //
          
-          //
         };
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         for (const id in acordes) {

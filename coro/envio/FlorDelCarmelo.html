@@ -89,20 +89,17 @@
     </header>
     <br /><br />
     <!-- ********************************************* -->
-    <h1 class="init"><a href=""> CORDERO 01 <img src="../../media/tube.png" alt="" class="img"></a></h1>
-    <h3 class="cita">" Al día siguiente ve a Jesús venir hacia él y dice: "He ahí el cordero de Dios, que quita el pecado del mundo. ". <br />Jn 1,29 </h3>
+    <h1 class="init"><a href="https://www.youtube.com/watch?v=SMsOUlY8TnA" target="_blank">Flor del Carmelo  <img src="../../media/tube.png" alt="" class="img"></a></h1>
+    <h3 class="cita">" Él dijo: «Ardo en celo por Yahvé, Dios Sebaot, porque los israelitas han abandonado tu alianza, han derribado tus altares y han pasado a espada a tus profetas; quedo yo solo y buscan mi vida para quitármela.»  ". <br />1Re 19,10 </h3>
 
     <!-- ********************************************* -->
     
         <details class="details">
           <summary>Orden Seglar Carmelita</summary>
         <ol>
-          <li>CHORDA:E-027 Bio09</li>
-          <li>SONUS:2T <br>
-          * || * <br>
-          </li>
-          <li> Ignacio Yepes (arreglo musical) </li>
-        
+          <li>CHORDA:Em027 Bio17 </li>
+          <li>SONUS:T6 <br> </li>
+          <li>Autor: San Simón Stock</li>
         </ol>
         </details>
    
@@ -122,43 +119,38 @@
 
     <div class="cancion">
       <pre class="preCoro" id="L01"></pre>
-      <p class="pCoro">Cordero de Dios que quitas </p>
+      <p class="pCoro"> Flor del Carmelo, viña florida</p>
 <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
       <pre class="preCoro" id="L02"></pre>
-      <p class="pCoro">El pecado del mundo </p>
+      <p class="pCoro">esplendor del cielo </p>
 <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
       <pre class="preCoro" id="L03"></pre>
-      <p class="pCoro">Ten piedad de nosotros  </p>
+      <p class="pCoro"> virgen fecunda y singular</p> <hr>
 <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
       <pre class="preCoro" id="L04"></pre>
-      <p class="pCoro">Ten piedad de nosotros (2) </p>
+      <p class="pCoro">¡oh madre tierna! </p>
 <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-      <hr />
       <pre class="preCoro" id="L05"></pre>
-      <p class="pCoro">Cordero de Dios que quitas </p>
+      <p class="pCoro">Intacta de hombre </p>
 <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
       <pre class="preCoro" id="L06"></pre>
-      <p class="pCoro"> El pecado del mundo</p>
-      <hr>
+      <p class="pCoro">a tus carmelitas proteja tu nombre </p>
 <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
       <pre class="preCoro" id="L07"></pre>
-      <p class="pCoro"> Danos la paz, danos la paz,</p>
+      <p class="pCoro"> estrella del mar</p>
 <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-      <pre class="preCoro" id="L08"></pre>
-      <p class="pCoro"> Danos, danos, danos la paz</p>
-      <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-      <pre class="preCoro" id="L09"></pre>
-      <p class="pCoro"> Danos, danos, danos la paz</p>
-      <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+  
     </div>
  
 <!-- ////////////////////////////////////////////////////////////// -->
     <script>
-      const nota = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+      const nota = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
       const letras = ["C", "C#", "D","D#","E", "F","F#", "G", "G#", "A","A#","B", ];
       const esp = (n) => " ".repeat(n); // Espacios visuales
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-let sig = ['m', 7]
+let sig = ['m', 7,'#', '.', ',', ';',]
+//0=m 1=7 2=# 3=. 4=, 5=;
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
       // Esta función actualiza los acordes mostrados según la transposición `n`
       function actualizarAcordes(n) {
@@ -168,18 +160,15 @@ let sig = ['m', 7]
         const lin = transpuestas.map((x) => letras[x - 1]);
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         const acordes = {
-          L01: [lin[0], esp(0), lin[5],],
-          L02: [lin[8], esp(0), lin[10],esp(0), lin[0],],
-
-          L03: [lin[5], esp(0), lin[10],esp(0), lin[3],esp(0), lin[0],],
-          L04: [lin[5], esp(0), lin[7],esp(0), lin[0],],
+          L01: [ lin[0]+sig[0]+sig[4],   lin[5]+sig[0]+sig[4], lin[0]+sig[0]+sig[4], lin[5]+sig[0]+sig[4], lin[0]+sig[0]+sig[4],],
+          L02: [esp(0), lin[5]+sig[0]+sig[4], esp(2),  lin[0]+sig[0]+sig[4],],
+          L03: [ lin[5]+sig[0]+sig[4],   lin[0]+sig[0]+sig[4],lin[10],esp(1), lin[0]+sig[0]+sig[4],],
           //
-          L05: [lin[0], esp(0), lin[5],],
-          L06: [lin[8], esp(0), lin[10],esp(0), lin[0],],
-
-          L07: [lin[8], esp(0), lin[10],esp(0), lin[7],],
-          L08: [lin[5], esp(0), lin[10],esp(0), lin[3],esp(0), lin[0],esp(0), lin[5],esp(0), lin[7],],
-          L09: [lin[5], esp(0), lin[10],esp(0), lin[3],esp(0), lin[0],esp(0), lin[5],esp(0), lin[7],],
+          L04: [esp(0),lin[3], esp(4), lin[10],],
+          L05: [esp(0),lin[8], esp(3), lin[3],],
+          L06: [esp(0), lin[5]+sig[0]+sig[4], esp(0),  lin[0]+sig[0]+sig[4],esp(0), lin[5]+sig[0]+sig[4],esp(0), lin[0]+sig[0]+sig[4],],
+          L07: [lin[8], esp(0), lin[10],esp(0), lin[0]+sig[0]+sig[4],],
+       
           //
         };
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -201,4 +190,3 @@ let sig = ['m', 7]
     </script>
   </body>
 </html>
-
