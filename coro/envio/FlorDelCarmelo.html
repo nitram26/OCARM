@@ -160,14 +160,14 @@ let sig = ['m', 7,'#', '.', ',', ';',]
         const lin = transpuestas.map((x) => letras[x - 1]);
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         const acordes = {
-          L01: [ lin[0]+sig[0]+sig[4],   lin[5]+sig[0]+sig[4], lin[0]+sig[0]+sig[4], lin[5]+sig[0]+sig[4], lin[0]+sig[0]+sig[4],],
-          L02: [esp(0), lin[5]+sig[0]+sig[4], esp(2),  lin[0]+sig[0]+sig[4],],
-          L03: [ lin[5]+sig[0]+sig[4],   lin[0]+sig[0]+sig[4],lin[10],esp(1), lin[0]+sig[0]+sig[4],],
+          L01: [lin[0]+sig[0],lin[5]+sig[0]+sig[3],lin[0]+sig[0], lin[5]+sig[0]+sig[3],lin[0]+sig[0],],
+          L02: [esp(0), lin[5]+sig[0]+sig[3], esp(2), lin[0]+sig[0],],
+          L03: [ lin[5]+sig[0]+sig[3],  lin[0]+sig[0],lin[10],esp(1),lin[0]+sig[0],],
           //
-          L04: [esp(0),lin[3], esp(4), lin[10],],
+          L04: [esp(0),lin[3]+sig[3], esp(4), lin[10],],
           L05: [esp(0),lin[8], esp(3), lin[3],],
-          L06: [esp(0), lin[5]+sig[0]+sig[4], esp(0),  lin[0]+sig[0]+sig[4],esp(0), lin[5]+sig[0]+sig[4],esp(0), lin[0]+sig[0]+sig[4],],
-          L07: [lin[8], esp(0), lin[10],esp(0), lin[0]+sig[0]+sig[4],],
+          L06: [esp(0), lin[5]+sig[0], esp(0), lin[0]+sig[0]+sig[4],esp(0), lin[5]+sig[0],esp(0),lin[0]+sig[0]+sig[4]],
+          L07: [lin[8], esp(0), lin[10],esp(0),lin[0]+sig[0],],
        
           //
         };
