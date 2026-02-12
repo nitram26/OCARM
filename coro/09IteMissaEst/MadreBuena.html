@@ -88,17 +88,18 @@
       </div>
     </header>
     <br /><br />
-    <!-- ********************************************* -->
-    <h1 class="init"><a href="https://www.youtube.com/watch?v=SMsOUlY8TnA" target="_blank">Flor del Carmelo  <img src="../../media/tube.png" alt="" class="img"></a></h1>
-    <h3 class="cita">" Él dijo: «Ardo en celo por Yahwéh, Dios Sebaot, porque tu pueblo ha abandonado tu alianza ". <br />1Re 19,10 </h3>
+    <!-- //////////////////////////////////////////////// -->
+    <h1 class="init"><a href="https://www.youtube.com/watch?v=KuVmoRT0abU" target="_blank">MADRE BUENA  <img src="../../media/tube.png" alt="" class="img"></a></h1>
+    <h3 class="cita">"¿Por qué has venido a visitarme, tú que eres la madre de mi Señor?  ". <br />Lc 1,43   </h3>
 
     <!-- ********************************************* -->
     
         <details class="details">
           <summary>Orden Seglar Carmelita</summary>
         <ol>
-          <li>CHORDA:Em027 Bio17 </li>
-          <li>SONUS:T2 +10-0 <br> </li>
+          <li>CHORDA:B-027 </li>
+          <li>SONUS: 10&11 1&11</li>
+          <li>Autor: Eladio Gallego//Grupo KAIROI</li>
         </ol>
         </details>
    
@@ -118,39 +119,61 @@
 
     <div class="cancion">
       <pre class="preCoro" id="L01"></pre>
-      <p class="pCoro"> Flor del Carmelo, viña florida</p>
+      <p class="pCoro">Tantas cosas en la vida, nos ofrecen plenitud </p>
 <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
       <pre class="preCoro" id="L02"></pre>
-      <p class="pCoro">esplendor del cielo </p>
+      <p class="pCoro">y no son más que mentiras que desgastan la inquietud. </p>
 <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
       <pre class="preCoro" id="L03"></pre>
-      <p class="pCoro"> virgen fecunda y singular</p> <hr>
+      <p class="pCoro">Tú has llenado mi existencia al quererme de verdad </p>
 <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 
       <pre class="preCoro" id="L04"></pre>
-      <p class="pCoro">¡oh madre tierna! </p>
+      <p class="pCoro">Yo quisiera madre buena amarte más. </p>
 <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+      <hr />
       <pre class="preCoro" id="L05"></pre>
-      <p class="pCoro">Intacta de hombre </p>
+      <p class="pCoro">en silencio escuchabas la palabra de Jesús    </p>
 <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
       <pre class="preCoro" id="L06"></pre>
-      <p class="pCoro">a tus carmelitas proteja tu nombre </p>
+      <p class="pCoro">Y la hacías pan de vida meditando en tu interior </p>
 <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
       <pre class="preCoro" id="L07"></pre>
-      <p class="pCoro"> estrella del mar</p>
+      <p class="pCoro"> la semilla que ha caído ya germina, ya está en flor</p>
 <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-  
+      <pre class="preCoro" id="L08"></pre>
+      <p class="pCoro">con el corazón en fiesta cantaré. </p> <hr>
+      <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+      <pre class="preCoro" id="L09"></pre>
+      <p class="pCoro">Ave María, Ave María ;  Ave María, Ave María. </p> <hr>
+      <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+       <pre>
+        <i>
+          Desde que yo era muy niño has estado junto a mí
+          y guiado de tu mano aprendí a decir sí,
+          al calor de la esperanza nunca se enfrió mi fe
+          y en la noche más oscura fuiste luz.
+          
+          No me dejes madre mía, ven conmigo al caminar,
+          quiero compartir mi vida y crear fraternidad.
+          muchas cosas en nosotros son el fruto de tu amor.
+          la plegaria más sencilla cantaré.
+          
+          Ave María, Ave María, Ave María, Ave María.
+        </i>
+
+       </pre>
     </div>
  
 <!-- ////////////////////////////////////////////////////////////// -->
     <script>
-      const nota = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+      const nota = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
       const letras = ["C", "C#", "D","D#","E", "F","F#", "G", "G#", "A","A#","B", ];
       const esp = (n) => " ".repeat(n); // Espacios visuales
-// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-let sig = ['m', 7,'#', '.', ',', ';',]
-//0=m 1=7 2=# 3=. 4=, 5=;
-// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    let sig = ['m', 7, '#', '.', ',', ';', 'sus4',]
+    //0=m 1=7 2=# 3=. 4=, 5=; 6=sus4
+    // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
       // Esta función actualiza los acordes mostrados según la transposición `n`
       function actualizarAcordes(n) {
         const transpuestas = nota.map(
@@ -159,15 +182,17 @@ let sig = ['m', 7,'#', '.', ',', ';',]
         const lin = transpuestas.map((x) => letras[x - 1]);
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         const acordes = {
-          L01: [lin[0]+sig[0],lin[5]+sig[0]+sig[3],lin[0]+sig[0], lin[5]+sig[0]+sig[3],lin[0]+sig[0],],
-          L02: [esp(0), lin[5]+sig[0]+sig[3], esp(2), lin[0]+sig[0],],
-          L03: [ lin[5]+sig[0]+sig[3],  lin[0]+sig[0],lin[10],esp(1),lin[0]+sig[0],],
+          L01: [lin[0]+sig[0]+sig[3], esp(8), lin[5]+sig[0],],
+          L02: [lin[10]+sig[1], esp(5), lin[3],esp(8), lin[7]+sig[0]+sig[3],],
+          L03: [esp(3),lin[0]+sig[0]+sig[3], esp(9), lin[5]+sig[0],],
+          L04: [lin[8], esp(10), lin[7]+sig[0]+sig[3],],
           //
-          L04: [esp(0),lin[3]+sig[3], esp(4), lin[10],],
-          L05: [esp(0),lin[8], esp(3), lin[3],],
-          L06: [esp(0), lin[5]+sig[0], esp(0), lin[0]+sig[0]+sig[4],esp(0), lin[5]+sig[0],esp(0),lin[0]+sig[0]+sig[4]],
-          L07: [lin[8], esp(0), lin[10],esp(0),lin[0]+sig[0],],
-       
+          L05: [lin[0]+sig[0]+sig[3], esp(8), lin[5]+sig[0],],
+          L06: [lin[10]+sig[1], esp(5), lin[3],esp(8), lin[7]+sig[0]+sig[3],],
+          L07: [esp(3),lin[0]+sig[0]+sig[3], esp(9), lin[5]+sig[0],],
+          L08: [lin[8], esp(10), lin[7]+sig[0]+sig[3],],
+          //
+          L09: [lin[3], lin[5]+sig[0],lin[8]+sig[3],lin[3],lin[10]+sig[5],esp(4), lin[3], lin[5]+sig[0],lin[8]+sig[3],lin[3],lin[10]+sig[5],],
           //
         };
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -177,7 +202,7 @@ let sig = ['m', 7,'#', '.', ',', ';',]
       }
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
  // Actualizar al cargar
- actualizarAcordes(4); // Valor por defecto: +2
+ actualizarAcordes(11); // Valor por defecto: +2
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
       // Evento de cambio en el select
       document
