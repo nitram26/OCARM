@@ -148,8 +148,8 @@
     const letras = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B",];
     const esp = (n) => " ".repeat(n); // Espacios visuales
     // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-    let sig = ['m', 7, '#', '.', ',', ';', 'sus4',]
-    //0=m 1=7 2=# 3=. 4=, 5=; 6=sus4
+    let sig = ['m', 7, '#', '.', ',', ';', 'sus4', '',]
+    //0=m 1=7 2=# 3=. 4=, 5=; 6=sus4; 7='';
     // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     // Esta función actualiza los acordes mostrados según la transposición `n`
     function actualizarAcordes(n) {
@@ -159,15 +159,15 @@
       const lin = transpuestas.map((x) => letras[x - 1]);
       // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
       const acordes = {
-        L01: [esp(0), lin[0], esp(0), lin[0],],
-        L02: [esp(0), lin[0], esp(0), lin[0],],
-        L03: [esp(0), lin[0], esp(0), lin[0],],
-        L04: [esp(0), lin[0], esp(0), lin[0],],
+        L01: [esp(0), lin[0]+sig[7], esp(0), lin[0]+sig[7],],
+        L02: [esp(0), lin[0]+sig[7], esp(0), lin[0]+sig[7],],
+        L03: [esp(0), lin[0]+sig[7], esp(0), lin[0]+sig[7],],
+        L04: [esp(0), lin[0]+sig[7], esp(0), lin[0]+sig[7],],
         //
-        L05: [esp(0), lin[0], esp(0), lin[0],],
-        L06: [esp(0), lin[0], esp(0), lin[0],],
-        L07: [esp(0), lin[0], esp(0), lin[0],],
-        L08: [esp(0), lin[0], esp(0), lin[0],],
+        L05: [esp(0), lin[0]+sig[7], esp(0), lin[0]+sig[7],],
+        L06: [esp(0), lin[0]+sig[7], esp(0), lin[0]+sig[7],],
+        L07: [esp(0), lin[0]+sig[7], esp(0), lin[0]+sig[7],],
+        L08: [esp(0), lin[0]+sig[7], esp(0), lin[0]+sig[7],],
         //
       };
       // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

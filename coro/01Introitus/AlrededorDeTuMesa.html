@@ -89,25 +89,18 @@
   </header>
   <br /><br />
   <!-- ********************************************* -->
-  <h1 class="init"><a href="https://www.youtube.com/watch?v=vsyP7TsniC8   " target="_blank"> CORDERO 01 <img
-        src="../../media/tube.png" alt="" class="img"></a></h1>
-  <h3 class="cita">" Al día siguiente ve a Jesús venir hacia él y dice: "He ahí el cordero de Dios, que quita el pecado
-    del mundo. ". <br />Jn 1,29 </h3>
-
+  <h1 class="init"><a href="" target="_blank">Alrededor de tu Mesa <img src="../../media/tube.png" alt="" class="img"></a></h1>
+  <h3 class="cita">"Yo se los digo: vendrán muchos de oriente y occidente a sentarse a la mesa con Abraham, Isaac y Jacob en el Reino de los cielos ". <br />Mt 8,11 </h3>
   <!-- ********************************************* -->
-
   <details class="details">
     <summary>Orden Seglar Carmelita</summary>
     <ol>
-      <li>INTRO: E A B-Em</li>
-      <li>EXITUS: B-Em</li>
-      <li>CHORDA:Em-027 Bio05</li>
-      <li>SONUS:2T 10 <br>
-      </li>
-
+      <li>INTRO: F A# C - F</li>
+      <li>EXITUS: C-F </li>
+      <li>CHORDA: F111-Bio20</li>
+      <li>SONUS: T1 <br>10</li>
     </ol>
   </details>
-
   <!-- ****************************** -->
   </ol>
   <span for="transposicion" class="cita">Elegir Acordes</span>
@@ -121,48 +114,56 @@
     <option value="9">A</option>
     <option value="11">B</option>
   </select>
-
+  <!-- ///////////////////////////////////////////////// -->
   <div class="cancion">
     <pre class="preCoro" id="L01"></pre>
-    <p class="pCoro">Cordero de Dios que quitas </p>
+    <p class="pCoro"><b>ALREDEDOR DE TU MESA VENIMOS A RECORDAR. </b> </p>
     <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
     <pre class="preCoro" id="L02"></pre>
-    <p class="pCoro">El pecado del mundo </p>
+    <p class="pCoro"><b>ALREDEDOR DE TU MESA VENIMOS A RECORDAR. </b> </p>
     <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
     <pre class="preCoro" id="L03"></pre>
-    <p class="pCoro">Ten piedad de nosotros </p>
+    <p class="pCoro"> <b>QUE TU PALABRA ES CAMINO </b></p>
     <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
     <pre class="preCoro" id="L04"></pre>
-    <p class="pCoro">Ten piedad de nosotros <b>(2) </b></p>
+    <p class="pCoro"> <b>TU CUERPO FRATERNIDAD.</b> </p>
     <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-    <hr />
     <pre class="preCoro" id="L05"></pre>
-    <p class="pCoro">Cordero de Dios que quitas </p>
+    <p class="pCoro"><b>QUE TU PALABRA ES CAMINO </b> </p>
     <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
     <pre class="preCoro" id="L06"></pre>
-    <p class="pCoro"> El pecado del mundo</p>
-    <hr>
+    <p class="pCoro"><b>TU CUERPO FRATERNIDAD.</b>  </p> <hr>
     <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
     <pre class="preCoro" id="L07"></pre>
-    <p class="pCoro"> Danos la paz, danos la paz,</p>
+    <p class="pCoro"> Hemos venido a tu mesa </p>
     <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
     <pre class="preCoro" id="L08"></pre>
-    <p class="pCoro"> Danos, danos, danos la paz</p>
+    <p class="pCoro">  a recordar el misterio de tu amor  </p>
     <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
     <pre class="preCoro" id="L09"></pre>
-    <p class="pCoro"> Danos, danos, danos la paz</p>
+    <p class="pCoro">  con nuestras manos manchadas  </p>
     <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+    <pre class="preCoro" id="L10"></pre>
+    <p class="pCoro">arrepentidos buscamos tu perdón. </p> <hr>
+    <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+   <pre>
+    Juntos y a veces sin vernos 
+    celebramos tu presencia sin sentir 
+    que se interrumpe el camino 
+    si no vamos como hermanos hacia Ti.
+
+   </pre>
   </div>
 
   <!-- ////////////////////////////////////////////////////////////// -->
   <script>
-    const nota = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+    const nota = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
     const letras = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B",];
     const esp = (n) => " ".repeat(n); // Espacios visuales
-    // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-    let sig = ['m', 7, '#', '.', ',', ';',]
-    //0=m 1=7 2=# 3=. 4=, 5=;
-    // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    let sig = ['m', 7, '#', '.', ',', ';', 'sus4','',]
+    //0=m 1=7 2=# 3=. 4=, 5=; 6=sus4; 7= '';
+    // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     // Esta función actualiza los acordes mostrados según la transposición `n`
     function actualizarAcordes(n) {
       const transpuestas = nota.map(
@@ -171,19 +172,21 @@
       const lin = transpuestas.map((x) => letras[x - 1]);
       // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
       const acordes = {
-        L01: [lin[0] + sig[0], esp(8), lin[5],],
-        L02: [lin[8], esp(0), lin[10], esp(4), lin[0] + sig[0],],
-
-        L03: [lin[5] + sig[0], esp(0), lin[10], esp(3), lin[3], lin[0] + sig[0],],
-        L04: [lin[5] + sig[0], esp(0), lin[7] + sig[1], esp(4), lin[0] + sig[0],],
+        L01: [esp(0), lin[0]+sig[3], esp(5), lin[9]+sig[0],esp(2), lin[0]+sig[3],esp(0), lin[9]+sig[0],esp(5), lin[7]+sig[1],esp(0), lin[0]+sig[3],],
+        L02: [esp(0), lin[0]+sig[3], esp(5), lin[9]+sig[0],esp(2), lin[0]+sig[3],esp(0), lin[9]+sig[0],esp(5), lin[7]+sig[1],esp(0), lin[0]+sig[3],],
+        L03: [esp(0), lin[2]+sig[3], esp(2), lin[7]+sig[1],esp(1), lin[4]+sig[4],esp(0), lin[9]+sig[0],],
+        L04: [esp(2), lin[2]+sig[0]+sig[3], esp(0), lin[2]+sig[3],esp(0), lin[0]+sig[3],esp(0), lin[9]+sig[0],],
+        L05: [esp(0), lin[2]+sig[3], esp(2), lin[7]+sig[1],esp(1), lin[4]+sig[4],esp(0), lin[9]+sig[0],],
+        L06: [esp(3), lin[2]+sig[0]+sig[3], esp(0), lin[7]+sig[1],esp(2), lin[0]+sig[3],],
         //
-        L05: [lin[0] + sig[0], esp(11), lin[5],],
-        L06: [lin[8], esp(0), lin[10], esp(4), lin[0] + sig[0],],
+       L07: [esp(0), lin[0]+sig[3], esp(0), lin[9]+sig[0],esp(3),lin[0]+sig[3]],
+      
 
-        L07: [lin[8], esp(7), lin[10], esp(0), lin[7] + sig[1],],
-        L08: [lin[5] + sig[0], lin[10], lin[3], lin[0] + sig[0], esp(0), lin[5] + sig[0], lin[7] + sig[1],],
-        L09: [lin[5] + sig[0], lin[10], lin[3], lin[0] + sig[0], esp(0), lin[5] + sig[0], lin[7] + sig[1],],
+        L08: [esp(1), lin[9]+sig[0], esp(0), lin[2]+sig[3],esp(2),lin[0]+sig[3]],
 
+        L09: [esp(0), lin[2]+sig[0]+sig[3], esp(3), lin[7]+sig[1],esp(2),lin[0]+sig[3]],
+
+        L10: [esp(3), lin[2]+sig[3], esp(1), lin[2]+sig[1]+sig[3],esp(1),lin[7]+sig[1]],
         //
       };
       // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -193,7 +196,7 @@
     }
     // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     // Actualizar al cargar
-    actualizarAcordes(4); // Valor por defecto: +2
+    actualizarAcordes(5); // Valor por defecto: +2
     // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     // Evento de cambio en el select
     document
