@@ -98,9 +98,11 @@
         <details class="details">
           <summary>Orden Seglar Carmelita</summary>
         <ol>
+          <li>INTRO: <b>DGA-D</b> </li>
+          <li>EXITUS: <b>A-D</b></li>
           <li>CHORDA:D-027 </li>
-          <li>SONUS: 10-1 1-1</li>
-          <li>Santiago Fernández</li>
+          <li>SONUS:T5 <br>10-200</li>
+        
         </ol>
         </details>
    
@@ -152,8 +154,9 @@
       const letras = ["C", "C#", "D","D#","E", "F","F#", "G", "G#", "A","A#","B", ];
       const esp = (n) => " ".repeat(n); // Espacios visuales
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-let sig = ['m', 7]
-// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  let sig = ['m', 7, '#', '.', ',', ';', 'sus4', '',]
+    //0=m 1=7 2=# 3=. 4=, 5=; 6=sus4; 7='';
+    // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
       // Esta función actualiza los acordes mostrados según la transposición `n`
       function actualizarAcordes(n) {
         const transpuestas = nota.map(
@@ -162,15 +165,15 @@ let sig = ['m', 7]
         const lin = transpuestas.map((x) => letras[x - 1]);
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         const acordes = {
-          L01: [lin[0], esp(1), lin[2]+sig[0],esp(0), lin[7]+sig[1],esp(0), lin[0],esp(0), lin[4]+sig[0],],
-          L02: [lin[9]+sig[0], esp(0), lin[2]+sig[0],esp(0), lin[7]+sig[1],esp(3), lin[0],],
-          L03: [lin[0], esp(3), lin[5],lin[7]+sig[1],esp(0), lin[0],esp(0), lin[4]+sig[0],],
-          L04: [lin[9]+sig[0], esp(1), lin[2]+sig[0],esp(0), lin[7]+sig[1],esp(0), lin[0], lin[5], lin[0],],
+          L01: [lin[0], esp(1), lin[2]+sig[0],esp(0), lin[7]+sig[1]+sig[4],esp(0), lin[0],esp(0), lin[4]+sig[0],],
+          L02: [lin[9]+sig[0]+sig[4], esp(0), lin[2]+sig[0],esp(0), lin[7]+sig[1]+sig[4],esp(3), lin[0],],
+          L03: [lin[0], esp(3), lin[5],lin[7]+sig[1]+sig[4],esp(0), lin[0],esp(0), lin[4]+sig[0],],
+          L04: [lin[9]+sig[0]+sig[4], esp(1), lin[2]+sig[0],esp(0), lin[7]+sig[1]+sig[4],esp(0), lin[0], lin[5], lin[0],],
           //
-          L05: [lin[7], esp(0), lin[2]+sig[0], lin[7]+sig[1],esp(2), lin[0],esp(0), lin[4]+sig[0],],
-          L06: [lin[9]+sig[0],lin[2]+sig[0],lin[7],esp(2), lin[4]+sig[0],],
-          L07: [lin[9]+sig[0], esp(0), lin[2]+sig[0],esp(0), lin[7]+sig[1],esp(0), lin[0],esp(0), lin[4]+sig[0],],
-          L08: [lin[9]+sig[0], esp(0), lin[2]+sig[0],lin[7]+sig[1],esp(2), lin[0], lin[5],],
+          L05: [lin[7], esp(0), lin[2]+sig[0], lin[7]+sig[1]+sig[4],esp(2), lin[0],esp(0), lin[4]+sig[0],],
+          L06: [lin[9]+sig[0]+sig[4],lin[2]+sig[0],lin[7]+sig[1]+sig[4],esp(2), lin[4]+sig[0],],
+          L07: [lin[9]+sig[0]+sig[4], esp(0), lin[2]+sig[0],esp(0), lin[7]+sig[1]+sig[4],esp(0), lin[0],esp(0), lin[4]+sig[0],],
+          L08: [lin[9]+sig[0]+sig[4], esp(0), lin[2]+sig[0],lin[7]+sig[1]+sig[4],esp(2), lin[0], lin[5],],
           //
         };
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
